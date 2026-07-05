@@ -1,0 +1,6 @@
+# APIレスポンスのローカルキャッシュ（再生成可能なため追跡しない）
+data/cache/
+
+# OS / editor
+.DS_Store
+*.swp

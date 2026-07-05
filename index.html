@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高専野球アーカイブ｜全国高専の試合結果</title>
+<meta name="description" content="全国の高等専門学校（高専）の硬式野球部の試合結果を、バーチャル高校野球のデータからまとめたサイト。夏の選手権地方大会を中心にこれまでの戦績を掲載。各高専出身の著名なエンジニア・経営者・研究者・プロ野球選手も紹介。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BE%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="brand-mark">⚾</span>
+      <div class="brand-text">
+        <h1>高専野球アーカイブ</h1>
+        <p>全国の高等専門学校・硬式野球部の試合結果</p>
+      </div>
+    </div>
+    <div class="header-meta" id="headerMeta"></div>
+  </div>
+</header>
+
+<section class="intro wrap">
+  <p>
+    全国の<strong>高等専門学校（高専）</strong>の硬式野球部にしぼって、
+    夏の全国高校野球選手権 地方大会を中心とした<strong>これまでの試合結果</strong>を一覧できるサイトです。
+    データは<a href="https://vk.sportsbull.jp/koshien/" target="_blank" rel="noopener">バーチャル高校野球</a>（朝日新聞社・朝日放送テレビ）を元にしています。
+    各高専の出身で著名な<strong>エンジニア・経営者・研究者・プロ野球選手</strong>もあわせて紹介します。
+  </p>
+</section>
+
+<section class="stats wrap" id="statsRow"></section>
+
+<section class="controls wrap">
+  <div class="search-box">
+    <input type="search" id="searchInput" placeholder="高専名・都道府県で検索（例: 明石、東京、宮崎）">
+  </div>
+  <div class="region-tabs" id="regionTabs"></div>
+  <div class="sort-row">
+    <label>並び替え
+      <select id="sortSelect">
+        <option value="region">地方順</option>
+        <option value="wins">勝利数が多い順</option>
+        <option value="games">試合数が多い順</option>
+        <option value="winrate">勝率が高い順</option>
+        <option value="kana">五十音順</option>
+      </select>
+    </label>
+    <label class="chk"><input type="checkbox" id="alumniOnly"> 著名OBがいる高専のみ</label>
+  </div>
+</section>
+
+<main class="wrap">
+  <div class="school-grid" id="schoolGrid"></div>
+  <p class="empty" id="emptyMsg" hidden>該当する高専が見つかりませんでした。</p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>データ出典：<a href="https://vk.sportsbull.jp/koshien/" target="_blank" rel="noopener">バーチャル高校野球</a>（朝日新聞社・朝日放送テレビ）。試合結果は同サイト掲載範囲に基づきます。</p>
+    <p>本サイトは高専野球のファンサイトであり、公式のものではありません。出身者情報はWikipedia等の公開情報を元にしています。</p>
+    <p class="gen" id="genDate"></p>
+  </div>
+</footer>
+
+<!-- 詳細モーダル -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true">
+    <button class="modal-close" data-close aria-label="閉じる">×</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="assets/data.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

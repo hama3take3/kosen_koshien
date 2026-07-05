@@ -1,0 +1,64 @@
+# 高専野球アーカイブ ⚾
+
+全国の**高等専門学校（高専）**の硬式野球部にしぼって、これまでの試合結果を一覧できる静的サイトです。
+データは[バーチャル高校野球](https://vk.sportsbull.jp/koshien/)（朝日新聞社・朝日放送テレビ）を元にしています。
+あわせて、各高専出身の著名な**エンジニア・経営者・研究者・プロ野球選手**を紹介します。
+
+## 特長
+
+- 全国 60 の高専（本科キャンパス単位・連合チーム含む）を掲載
+- **夏の全国高校野球選手権 地方大会**の過去戦績（2006年〜）を中心に収録
+- 直近の**春季・秋季**大会の結果も掲載
+- 地方・都道府県・キーワードでの絞り込み、勝利数／勝率などでの並び替え
+- 各高専の詳細では、年度別の試合結果テーブルと著名OB・OGを表示
+- 連合チーム（部員不足で他校と合同で出場したチーム）の試合も、構成校の高専に紐づけて収録
+
+## 使い方（ローカル表示）
+
+`assets/data.js` にデータを埋め込んでいるため、そのままブラウザで `index.html` を開けば表示できます。
+（`file://` でも動作します。）
+
+```
+open index.html      # macOS
+```
+
+GitHub Pages で公開する場合は、リポジトリの Pages 設定で本ブランチのルートを公開対象にしてください。
+
+## データの再生成
+
+```bash
+# 1. バーチャル高校野球の非公開JSON APIから試合結果を収集
+python3 scripts/scrape.py          # -> data/kosen_results.json
+
+# 2. 試合結果と出身者情報(data/alumni.json)を統合してサイト用データを生成
+python3 scripts/build_site.py      # -> assets/data.js
+```
+
+### データ元について
+
+バーチャル高校野球が内部的に利用している以下のエンドポイントを参照しています（`curl` で取得）。
+
+| 用途 | エンドポイント |
+| --- | --- |
+| 学校検索 | `https://api.base.asahi.com/?command=school_search&keyword=高専` |
+| 学校別戦績（直近） | `https://api.base.asahi.com/?command=school_record&school_id=<id>` |
+| 大会別ブラケット（過去全試合） | `https://api.base.asahi.com/?command=game_tour_record&year=<年>&tournament_id=<id>` |
+
+## ファイル構成
+
+```
+index.html            トップページ
+assets/style.css      スタイル
+assets/app.js         表示ロジック（検索・絞り込み・詳細モーダル）
+assets/data.js        サイトに埋め込む統合データ（自動生成）
+data/kosen_results.json  収集した試合結果（自動生成）
+data/alumni.json      高専別の著名な出身者データ（手動整備）
+scripts/scrape.py     試合結果スクレイパー
+scripts/build_site.py データ統合スクリプト
+```
+
+## 注意事項
+
+- 本サイトは高専野球のファンサイトであり、公式のものではありません。
+- 試合結果はバーチャル高校野球の掲載範囲に基づきます。掲載のない年・大会は反映されません。
+- 出身者情報は Wikipedia 等の公開情報を元に整理したものです。中退・在籍者を含みます。
