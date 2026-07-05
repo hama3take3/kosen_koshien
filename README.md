@@ -47,7 +47,8 @@ python3 scripts/build_site.py      # -> assets/data.js
 ## ファイル構成
 
 ```
-index.html            トップページ
+index.html            トップページ（assets/ を参照）
+site.html             単一HTML版（外部参照なし・単体で閲覧/共有可能。自動生成）
 assets/style.css      スタイル
 assets/app.js         表示ロジック（検索・絞り込み・詳細モーダル）
 assets/data.js        サイトに埋め込む統合データ（自動生成）

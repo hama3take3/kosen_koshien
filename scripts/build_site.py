@@ -55,3 +55,28 @@ total_alumni = sum(len(s["alumni"]) for s in results["schools"])
 print(f"schools={len(results['schools'])}  games={total_games}  "
       f"alumni={total_alumni}  schools_with_alumni={matched}")
 print("wrote assets/data.js")
+
+
+# ---------------------------------------------------------------------------
+# 単一HTML(site.html)を生成 — 外部参照なしで単体でも閲覧・共有できる版
+# ---------------------------------------------------------------------------
+import re
+
+html = (ROOT / "index.html").read_text(encoding="utf-8")
+css = (ROOT / "assets" / "style.css").read_text(encoding="utf-8")
+app = (ROOT / "assets" / "app.js").read_text(encoding="utf-8")
+
+body = html.split("<body>", 1)[1].split("</body>", 1)[0]
+body = re.sub(r'<script src="assets/[^"]+"></script>\s*', "", body)
+
+bundle = (
+    '<!DOCTYPE html>\n<html lang="ja">\n<head>\n<meta charset="UTF-8">\n'
+    '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+    "<title>高専野球アーカイブ｜全国高専の試合結果</title>\n"
+    '<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' '
+    "viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%BE%3C/text%3E%3C/svg%3E\">\n"
+    f"<style>\n{css}\n</style>\n</head>\n<body>\n{body}\n"
+    f"<script>\n{out}</script>\n<script>\n{app}\n</script>\n</body>\n</html>\n"
+)
+(ROOT / "site.html").write_text(bundle, encoding="utf-8")
+print("wrote site.html (self-contained bundle)")
