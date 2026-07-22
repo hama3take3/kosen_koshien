@@ -8,7 +8,7 @@
   var FIELD_CLASS = { "エンジニア": "eng", "経営者": "biz", "研究者": "res", "プロ野球選手": "bb", "その他": "etc" };
   var FIELD_SHORT = { "エンジニア": "技", "経営者": "経", "研究者": "研", "プロ野球選手": "球", "その他": "他" };
 
-  var state = { region: "all", q: "", sort: "region", alumniOnly: false };
+  var state = { region: "all", q: "", sort: "region", alumniOnly: false, pref: "" };
 
   var $grid = document.getElementById("schoolGrid");
   var $empty = document.getElementById("emptyMsg");
@@ -52,6 +52,8 @@
     $tabs.addEventListener("click", function (e) {
       var b = e.target.closest("button"); if (!b) return;
       state.region = b.getAttribute("data-region");
+      state.pref = "";           // 地方タブを選んだら地図の絞り込みは解除
+      updateMapActive();
       Array.prototype.forEach.call($tabs.children, function (c) { c.classList.toggle("active", c === b); });
       render();
     });
@@ -61,6 +63,7 @@
   function filtered() {
     var q = state.q.trim();
     var list = schools.filter(function (s) {
+      if (state.pref && s.prefecture !== state.pref) return false;
       if (state.region !== "all" && s.region !== state.region) return false;
       if (state.alumniOnly && (!s.alumni || !s.alumni.length)) return false;
       if (q) {
@@ -409,6 +412,7 @@
       if (changed) {
         updateCard(sc);
         renderStats();
+        renderCurrent();
         refreshOpenModal(sc);
       }
       if (anyOk) {
@@ -425,9 +429,168 @@
     setLive("done", "✓ " + msg);
   }
 
+  // ---- 日本地図（タイル）から高専を選択 ----
+  // [都道府県名, row, col]（地理に沿ったタイル配置。列1=西, 行1=北）
+  var PREFS = [
+    ["北海道", 1, 14],
+    ["青森県", 3, 13], ["秋田県", 4, 12], ["岩手県", 4, 13],
+    ["山形県", 5, 12], ["宮城県", 5, 13], ["新潟県", 6, 12], ["福島県", 6, 13],
+    ["群馬県", 7, 12], ["栃木県", 7, 13], ["茨城県", 7, 14],
+    ["富山県", 7, 10], ["石川県", 7, 9], ["長野県", 8, 11], ["埼玉県", 8, 13],
+    ["福井県", 8, 9], ["山梨県", 9, 12], ["東京都", 9, 13], ["千葉県", 9, 14],
+    ["鳥取県", 8, 7], ["島根県", 8, 5],
+    ["兵庫県", 9, 7], ["京都府", 9, 8], ["滋賀県", 9, 9], ["岐阜県", 9, 10],
+    ["岡山県", 9, 6], ["広島県", 9, 5], ["山口県", 9, 4],
+    ["大阪府", 10, 8], ["奈良県", 10, 9], ["愛知県", 10, 10], ["静岡県", 10, 11], ["神奈川県", 10, 13],
+    ["香川県", 10, 6], ["徳島県", 10, 7], ["福岡県", 10, 3], ["佐賀県", 10, 2], ["大分県", 10, 4],
+    ["三重県", 11, 9], ["和歌山県", 11, 8], ["愛媛県", 11, 5], ["高知県", 11, 6],
+    ["長崎県", 11, 2], ["熊本県", 11, 3],
+    ["宮崎県", 12, 4], ["鹿児島県", 12, 3], ["沖縄県", 13, 1]
+  ];
+  var MAP_COLS = 14, MAP_ROWS = 13;
+
+  function schoolsByPref() {
+    var m = {};
+    schools.forEach(function (s) { (m[s.prefecture] = m[s.prefecture] || []).push(s); });
+    return m;
+  }
+  function prefShort(n) {
+    if (n === "北海道") return "北海道";
+    return n.replace(/(県|府|都)$/, "");
+  }
+
+  function renderMap() {
+    var $map = document.getElementById("jpMap");
+    if (!$map) return;
+    $map.style.gridTemplateColumns = "repeat(" + MAP_COLS + ", 1fr)";
+    $map.style.gridTemplateRows = "repeat(" + MAP_ROWS + ", 1fr)";
+    var byp = schoolsByPref();
+    $map.innerHTML = PREFS.map(function (p) {
+      var name = p[0], r = p[1], c = p[2];
+      var list = byp[name] || [];
+      var has = list.length > 0;
+      var cnt = has ? '<span class="pt-c">' + list.length + '</span>' : '';
+      return '<div class="pref-tile ' + (has ? "has" : "") + '" style="grid-row:' + r + ';grid-column:' + c + '"' +
+        (has ? ' data-pref="' + esc(name) + '" title="' + esc(name) + '（' + list.length + '校）"' : '') +
+        '><span class="pt-n">' + esc(prefShort(name)) + '</span>' + cnt + '</div>';
+    }).join("");
+    $map.addEventListener("click", function (e) {
+      var t = e.target.closest(".pref-tile.has"); if (!t) return;
+      var pref = t.getAttribute("data-pref");
+      state.pref = (state.pref === pref) ? "" : pref;   // 同じ県を再クリックで解除
+      if (state.pref) { state.region = "all"; syncRegionTabs(); }
+      updateMapActive();
+      render();
+      var grid = document.getElementById("schoolGrid");
+      if (state.pref && grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
+
+  function updateMapActive() {
+    var $map = document.getElementById("jpMap");
+    if ($map) {
+      Array.prototype.forEach.call($map.querySelectorAll(".pref-tile"), function (t) {
+        t.classList.toggle("active", !!state.pref && t.getAttribute("data-pref") === state.pref);
+      });
+    }
+    var $sel = document.getElementById("mapSelected");
+    if ($sel) {
+      if (state.pref) {
+        var n = (schoolsByPref()[state.pref] || []).length;
+        $sel.hidden = false;
+        $sel.innerHTML = "選択中：" + esc(state.pref) + "（" + n + "校）<span class=\"ms-x\">✕ 解除</span>";
+      } else { $sel.hidden = true; $sel.innerHTML = ""; }
+    }
+  }
+  function syncRegionTabs() {
+    var $tabs = document.getElementById("regionTabs");
+    if (!$tabs) return;
+    Array.prototype.forEach.call($tabs.children, function (c) {
+      c.classList.toggle("active", c.getAttribute("data-region") === state.region);
+    });
+  }
+  document.getElementById("mapSelected").addEventListener("click", function () {
+    state.pref = ""; updateMapActive(); render();
+  });
+
+  // ---- 開催中の大会（勝ち残り／敗退）----
+  function dateVal(g) {
+    var p = (g.date || "").split("/");
+    return (parseInt(p[0], 10) || 0) * 100 + (parseInt(p[1], 10) || 0);
+  }
+  function renderCurrent() {
+    var $sec = document.getElementById("currentSection");
+    if (!$sec) return;
+    // 夏の最新年度＝開催中の大会年
+    var curYear = "";
+    schools.forEach(function (s) {
+      s.games.forEach(function (g) {
+        if (g.season === "夏" && (!curYear || g.year > curYear)) curYear = g.year;
+      });
+    });
+    if (!curYear) { $sec.hidden = true; return; }
+
+    var alive = [], out = [];
+    schools.forEach(function (s) {
+      var gs = s.games.filter(function (g) { return g.season === "夏" && g.year === curYear; });
+      if (!gs.length) return;
+      gs.sort(function (a, b) { return dateVal(a) - dateVal(b); });
+      var last = gs[gs.length - 1];
+      var wins = gs.filter(function (g) { return g.result === "win"; }).length;
+      var entry = { s: s, last: last, wins: wins, played: gs.length };
+      if (last.result === "lose") out.push(entry); else alive.push(entry);
+    });
+
+    if (!alive.length && !out.length) { $sec.hidden = true; return; }
+    $sec.hidden = false;
+    document.getElementById("currentTitle").textContent = curYear + "年 夏の地方大会（選手権）";
+
+    // 勝ち残り：勝利数が多い順
+    alive.sort(function (a, b) { return b.wins - a.wins || dateVal(b.last) - dateVal(a.last); });
+    // 敗退：最後の試合が新しい順
+    out.sort(function (a, b) { return dateVal(b.last) - dateVal(a.last); });
+
+    document.getElementById("aliveCount").textContent = alive.length + "校";
+    document.getElementById("outCount").textContent = out.length + "校";
+
+    function itemHtml(e, kind) {
+      var g = e.last;
+      var scoreHtml = '<span class="cur-score">' + esc(g.score_self) + '–' + esc(g.score_opp) + '</span>';
+      var teamNote = (g.team_name && g.team_name.indexOf("・") !== -1) ? '（連合）' : '';
+      var detail;
+      if (kind === "alive") {
+        detail = '<span class="cd-round">' + esc(g.round) + '</span> 突破 ・ <span class="cd-opp">' + esc(g.opponent) + '</span> に勝利'
+          + (e.wins > 1 ? ' ・ 今大会 ' + e.wins + '勝' : '');
+      } else {
+        detail = '<span class="cd-round">' + esc(g.round) + '</span> で敗退 ・ <span class="cd-opp">' + esc(g.opponent) + '</span> に敗れる'
+          + (e.wins > 0 ? '（今大会 ' + e.wins + '勝）' : '');
+      }
+      var badge = kind === "alive" ? '<span class="cur-badge alive">勝ち残り</span>' : '<span class="cur-badge out">敗退</span>';
+      return '<div class="cur-item ' + kind + '" data-id="' + esc(e.s.id) + '">' +
+        '<span class="cur-name">' + esc(e.s.name) + teamNote + '</span>' +
+        '<span class="cur-detail">' + detail + '</span>' + scoreHtml + badge +
+      '</div>';
+    }
+
+    var aHtml = alive.length ? alive.map(function (e) { return itemHtml(e, "alive"); }).join("")
+      : '<p class="current-empty">勝ち残っている高専はありません。</p>';
+    var oHtml = out.length ? out.map(function (e) { return itemHtml(e, "out"); }).join("")
+      : '<p class="current-empty">敗退した高専はまだありません。</p>';
+    document.getElementById("aliveList").innerHTML = aHtml;
+    document.getElementById("outList").innerHTML = oHtml;
+  }
+  // 開催中セクションのクリック→詳細モーダル
+  document.getElementById("currentSection").addEventListener("click", function (e) {
+    var it = e.target.closest(".cur-item"); if (!it) return;
+    var s = schools.find(function (x) { return x.id === it.getAttribute("data-id"); });
+    if (s) openModal(s);
+  });
+
   // ---- init ----
   renderStats();
   renderTabs();
+  renderMap();
+  renderCurrent();
   render();
   liveRefresh();
 })();

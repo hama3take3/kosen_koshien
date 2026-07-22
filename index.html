@@ -36,6 +36,32 @@
 
 <section class="stats wrap" id="statsRow"></section>
 
+<section class="current wrap" id="currentSection" hidden>
+  <div class="current-head">
+    <h2 id="currentTitle">開催中の大会</h2>
+    <p class="current-note">勝ち残っている高専と、敗退した高専の最後の試合結果です。（ページを開くたびに最新化されます）</p>
+  </div>
+  <div class="current-cols">
+    <div class="current-col">
+      <h3 class="cc-title alive">勝ち残り <span id="aliveCount" class="cc-count"></span></h3>
+      <div class="current-list" id="aliveList"></div>
+    </div>
+    <div class="current-col">
+      <h3 class="cc-title out">敗退（最後の試合） <span id="outCount" class="cc-count"></span></h3>
+      <div class="current-list" id="outList"></div>
+    </div>
+  </div>
+</section>
+
+<section class="mapwrap wrap">
+  <div class="map-head">
+    <h2>地図から高専をさがす</h2>
+    <div class="map-selected" id="mapSelected" hidden></div>
+  </div>
+  <div class="jpmap" id="jpMap"></div>
+  <p class="map-legend"><span class="lg-swatch has"></span>高専のある都道府県（クリックで絞り込み）　<span class="lg-swatch none"></span>高専なし</p>
+</section>
+
 <section class="controls wrap">
   <div class="search-box">
     <input type="search" id="searchInput" placeholder="高専名・都道府県で検索（例: 明石、東京、宮崎）">

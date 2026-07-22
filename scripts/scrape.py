@@ -31,12 +31,19 @@ def _cache_key(params):
     return urllib.parse.urlencode(sorted(params.items())).replace("%", "_").replace("&", "__")[:180]
 
 
+LAST_FROM_CACHE = False
+
+
 def curl_json(params, cache=True):
     """curl 経由でAPIを叩き JSON を返す（プロキシ/TLS対応済み・ディスクキャッシュ付）"""
+    global LAST_FROM_CACHE
+    LAST_FROM_CACHE = False
     cf = CACHE / (_cache_key(params) + ".json")
     if cache and cf.exists():
         try:
-            return json.loads(cf.read_text(encoding="utf-8"))
+            data = json.loads(cf.read_text(encoding="utf-8"))
+            LAST_FROM_CACHE = True
+            return data
         except Exception:
             pass
     qs = urllib.parse.urlencode(params)
@@ -290,7 +297,8 @@ def main():
             continue
         cid = canon[0]
         rec = curl_json({"command": "school_record", "school_id": sid})
-        time.sleep(0.2)
+        if not LAST_FROM_CACHE:
+            time.sleep(0.2)
         if not rec or "result" not in rec:
             continue
         r = rec["result"]
@@ -307,10 +315,21 @@ def main():
             gid = g.get("game_id", "")
             if gid and gid in seen_game[cid]:
                 continue
+            # status_id 3 = 試合終了（結果確定）のみ採用。中止・ノーゲーム等(4等)は除外
+            if str(g.get("status_id", "")) != "3":
+                continue
+            wf = g.get("win_flg", "")
+            ss, so = str(g.get("score_sum1", "")), str(g.get("score_sum2", ""))
+            if wf == "1":
+                result = "win"
+            elif wf == "2":
+                result = "lose"
+            elif ss.isdigit() and so.isdigit():
+                result = "win" if int(ss) > int(so) else ("lose" if int(ss) < int(so) else "draw")
+            else:
+                continue  # 勝敗不明はスキップ
             if gid:
                 seen_game[cid].add(gid)
-            wf = g.get("win_flg", "")
-            result = "win" if wf == "1" else ("lose" if wf == "2" else "other")
             tname = g.get("tournament_name_r", "")
             A["games"].append({
                 "game_id": gid,
@@ -334,7 +353,8 @@ def main():
             for year in sorted(years):
                 res = curl_json({"command": "game_tour_record",
                                  "year": str(year), "tournament_id": tid})
-                time.sleep(0.15)
+                if not LAST_FROM_CACHE:
+                    time.sleep(0.15)
                 if not res or "result" not in res:
                     continue
                 R = res["result"]
@@ -363,7 +383,9 @@ def main():
                     seen_game.setdefault(cid, set())
                     if gid and gid in seen_game[cid]:
                         continue
-                    # スコアが数値の確定試合のみ
+                    # status_id 3 = 試合終了のみ。中止・ノーゲーム(4等)や未消化は除外
+                    if str(g.get("status_id", "")) != "3":
+                        continue
                     if not (str(ss).isdigit() and str(so).isdigit()):
                         continue
                     if gid:

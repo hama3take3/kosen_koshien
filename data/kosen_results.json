@@ -31,7 +31,7 @@
     "釧路高専",
     "釧路高専・釧路商・標茶・霧多布・厚岸翔洋"
    ],
-   "total_games": 35,
+   "total_games": 34,
    "wins": 5,
    "loses": 29,
    "games": [
@@ -437,19 +437,6 @@
      "score_self": "18",
      "score_opp": "0",
      "result": "win"
-    },
-    {
-     "game_id": "28288",
-     "year": "2009",
-     "date": "7/1",
-     "season": "夏",
-     "tournament": "全国高校野球選手権北北海道大会",
-     "round": "地区大会1回戦",
-     "team_name": "釧路高専",
-     "opponent": "阿寒",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "19805",
@@ -1373,7 +1360,7 @@
    "team_names": [
     "苫小牧高専"
    ],
-   "total_games": 32,
+   "total_games": 31,
    "wins": 5,
    "loses": 26,
    "games": [
@@ -1729,19 +1716,6 @@
      "result": "lose"
     },
     {
-     "game_id": "28285",
-     "year": "2009",
-     "date": "7/1",
-     "season": "夏",
-     "tournament": "全国高校野球選手権南北海道大会",
-     "round": "地区大会2回戦",
-     "team_name": "苫小牧高専",
-     "opponent": "白老東",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "28201",
      "year": "2009",
      "date": "6/26",
@@ -1822,7 +1796,7 @@
     "名久井農・八戸商・八戸高専",
     "名久井農・八戸商・百石・八戸高専"
    ],
-   "total_games": 39,
+   "total_games": 37,
    "wins": 9,
    "loses": 28,
    "games": [
@@ -2217,32 +2191,6 @@
      "result": "win"
     },
     {
-     "game_id": "56835",
-     "year": "2012",
-     "date": "7/16",
-     "season": "夏",
-     "tournament": "全国高校野球選手権青森大会",
-     "round": "2回戦",
-     "team_name": "八戸高専",
-     "opponent": "岩木",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "56427",
-     "year": "2012",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権青森大会",
-     "round": "2回戦",
-     "team_name": "八戸高専",
-     "opponent": "岩木",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "47979",
      "year": "2011",
      "date": "7/17",
@@ -2353,23 +2301,10 @@
     "一関高専",
     "一関高専・前沢・岩谷堂"
    ],
-   "total_games": 33,
+   "total_games": 28,
    "wins": 4,
-   "loses": 27,
+   "loses": 24,
    "games": [
-    {
-     "game_id": "264452",
-     "year": "2026",
-     "date": "5/2",
-     "season": "春",
-     "tournament": "春季岩手大会",
-     "round": "敗者復活1回戦",
-     "team_name": "一関高専",
-     "opponent": "千厩",
-     "score_self": "",
-     "score_opp": "",
-     "result": "lose"
-    },
     {
      "game_id": "263911",
      "year": "2026",
@@ -2381,32 +2316,6 @@
      "opponent": "一関二",
      "score_self": "0",
      "score_opp": "7",
-     "result": "lose"
-    },
-    {
-     "game_id": "257799",
-     "year": "2025",
-     "date": "8/27",
-     "season": "秋",
-     "tournament": "秋季岩手大会",
-     "round": "敗者復活1回戦",
-     "team_name": "一関高専",
-     "opponent": "水沢工",
-     "score_self": "",
-     "score_opp": "",
-     "result": "lose"
-    },
-    {
-     "game_id": "257678",
-     "year": "2025",
-     "date": "8/24",
-     "season": "秋",
-     "tournament": "秋季岩手大会",
-     "round": "地区予選1回戦",
-     "team_name": "一関高専",
-     "opponent": "一関一",
-     "score_self": "",
-     "score_opp": "",
      "result": "lose"
     },
     {
@@ -2460,19 +2369,6 @@
      "score_self": "3",
      "score_opp": "10",
      "result": "lose"
-    },
-    {
-     "game_id": "244608",
-     "year": "2024",
-     "date": "8/28",
-     "season": "秋",
-     "tournament": "秋季岩手大会",
-     "round": "敗者復活1回戦",
-     "team_name": "一関高専",
-     "opponent": "千厩",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "244315",
@@ -2748,19 +2644,6 @@
      "result": "win"
     },
     {
-     "game_id": "11997",
-     "year": "2007",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権岩手大会",
-     "round": "2回戦",
-     "team_name": "一関高専",
-     "opponent": "雫石",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "11448",
      "year": "2007",
      "date": "7/13",
@@ -2804,7 +2687,7 @@
    "team_names": [
     "秋田高専"
    ],
-   "total_games": 33,
+   "total_games": 32,
    "wins": 5,
    "loses": 27,
    "games": [
@@ -3134,19 +3017,6 @@
      "result": "lose"
     },
     {
-     "game_id": "56439",
-     "year": "2012",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権秋田大会",
-     "round": "2回戦",
-     "team_name": "秋田高専",
-     "opponent": "大曲工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "56202",
      "year": "2012",
      "date": "7/14",
@@ -3255,7 +3125,7 @@
    "team_names": [
     "鶴岡高専"
    ],
-   "total_games": 35,
+   "total_games": 34,
    "wins": 9,
    "loses": 25,
    "games": [
@@ -3650,19 +3520,6 @@
      "result": "lose"
     },
     {
-     "game_id": "39498",
-     "year": "2010",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権山形大会",
-     "round": "1回戦",
-     "team_name": "鶴岡高専",
-     "opponent": "東海大山形",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "28673",
      "year": "2009",
      "date": "7/11",
@@ -3733,9 +3590,9 @@
     "仙台電波高専",
     "仙台高専名取"
    ],
-   "total_games": 47,
+   "total_games": 43,
    "wins": 18,
-   "loses": 26,
+   "loses": 25,
    "games": [
     {
      "game_id": "264301",
@@ -3917,19 +3774,6 @@
      "opponent": "塩釜",
      "score_self": "9",
      "score_opp": "14",
-     "result": "lose"
-    },
-    {
-     "game_id": "229624",
-     "year": "2023",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権宮城大会",
-     "round": "2回戦",
-     "team_name": "仙台高専名取",
-     "opponent": "塩釜",
-     "score_self": "3",
-     "score_opp": "6",
      "result": "lose"
     },
     {
@@ -4284,19 +4128,6 @@
      "result": "win"
     },
     {
-     "game_id": "11250",
-     "year": "2007",
-     "date": "7/11",
-     "season": "夏",
-     "tournament": "全国高校野球選手権宮城大会",
-     "round": "1回戦",
-     "team_name": "仙台電波高専",
-     "opponent": "松島",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "5836",
      "year": "2006",
      "date": "7/23",
@@ -4310,19 +4141,6 @@
      "result": "lose"
     },
     {
-     "game_id": "5153",
-     "year": "2006",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権宮城大会",
-     "round": "3回戦",
-     "team_name": "仙台電波高専",
-     "opponent": "宮城工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "3593",
      "year": "2006",
      "date": "7/16",
@@ -4334,19 +4152,6 @@
      "score_self": "8",
      "score_opp": "2",
      "result": "win"
-    },
-    {
-     "game_id": "2845",
-     "year": "2006",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権宮城大会",
-     "round": "2回戦",
-     "team_name": "仙台電波高専",
-     "opponent": "黒川",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -4367,7 +4172,7 @@
     "仙台高専広瀬",
     "宮城高専"
    ],
-   "total_games": 18,
+   "total_games": 16,
    "wins": 4,
    "loses": 12,
    "games": [
@@ -4489,19 +4294,6 @@
      "result": "lose"
     },
     {
-     "game_id": "31796",
-     "year": "2009",
-     "date": "7/22",
-     "season": "夏",
-     "tournament": "全国高校野球選手権宮城大会",
-     "round": "3回戦",
-     "team_name": "宮城高専",
-     "opponent": "宮城農",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "31699",
      "year": "2009",
      "date": "7/21",
@@ -4591,19 +4383,6 @@
      "score_self": "2",
      "score_opp": "4",
      "result": "lose"
-    },
-    {
-     "game_id": "2839",
-     "year": "2006",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権宮城大会",
-     "round": "2回戦",
-     "team_name": "宮城高専",
-     "opponent": "名取北",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -4971,7 +4750,7 @@
     "茨城高専・那珂湊",
     "那珂湊・茨城高専"
    ],
-   "total_games": 36,
+   "total_games": 34,
    "wins": 7,
    "loses": 27,
    "games": [
@@ -5340,19 +5119,6 @@
      "result": "lose"
     },
     {
-     "game_id": "48714",
-     "year": "2011",
-     "date": "7/19",
-     "season": "夏",
-     "tournament": "全国高校野球選手権茨城大会",
-     "round": "2回戦",
-     "team_name": "茨城高専",
-     "opponent": "竜ケ崎一",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "38384",
      "year": "2010",
      "date": "7/13",
@@ -5405,19 +5171,6 @@
      "result": "lose"
     },
     {
-     "game_id": "11698",
-     "year": "2007",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権茨城大会",
-     "round": "2回戦",
-     "team_name": "茨城高専",
-     "opponent": "下館工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "10987",
      "year": "2007",
      "date": "7/8",
@@ -5464,7 +5217,7 @@
     "壬生・小山高専・栃木農・足利南",
     "小山高専"
    ],
-   "total_games": 34,
+   "total_games": 32,
    "wins": 7,
    "loses": 25,
    "games": [
@@ -5729,19 +5482,6 @@
      "result": "lose"
     },
     {
-     "game_id": "141152",
-     "year": "2016",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権栃木大会",
-     "round": "1回戦",
-     "team_name": "小山高専",
-     "opponent": "黒磯",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "127315",
      "year": "2015",
      "date": "7/13",
@@ -5872,19 +5612,6 @@
      "result": "lose"
     },
     {
-     "game_id": "12169",
-     "year": "2007",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権栃木大会",
-     "round": "1回戦",
-     "team_name": "小山高専",
-     "opponent": "真岡",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "2649",
      "year": "2006",
      "date": "7/14",
@@ -5928,7 +5655,7 @@
    "team_names": [
     "群馬高専"
    ],
-   "total_games": 37,
+   "total_games": 35,
    "wins": 10,
    "loses": 25,
    "games": [
@@ -6349,32 +6076,6 @@
      "result": "lose"
     },
     {
-     "game_id": "11714",
-     "year": "2007",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権群馬大会",
-     "round": "3回戦",
-     "team_name": "群馬高専",
-     "opponent": "西邑楽",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "12199",
-     "year": "2007",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権群馬大会",
-     "round": "3回戦",
-     "team_name": "群馬高専",
-     "opponent": "西邑楽",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "10975",
      "year": "2007",
      "date": "7/7",
@@ -6434,7 +6135,7 @@
     "天羽・木更津高専・君津青葉",
     "木更津高専"
    ],
-   "total_games": 32,
+   "total_games": 31,
    "wins": 4,
    "loses": 27,
    "games": [
@@ -6816,19 +6517,6 @@
      "result": "lose"
     },
     {
-     "game_id": "12947",
-     "year": "2007",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権千葉大会",
-     "round": "2回戦",
-     "team_name": "木更津高専",
-     "opponent": "千葉商大付",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "11603",
      "year": "2007",
      "date": "7/13",
@@ -6879,7 +6567,7 @@
     "産業技術高専",
     "都産業技術高専"
    ],
-   "total_games": 28,
+   "total_games": 27,
    "wins": 2,
    "loses": 25,
    "games": [
@@ -6921,19 +6609,6 @@
      "score_self": "0",
      "score_opp": "17",
      "result": "lose"
-    },
-    {
-     "game_id": "255144",
-     "year": "2025",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "選手権東東京大会",
-     "round": "3回戦",
-     "team_name": "産業技術高専",
-     "opponent": "葛飾野",
-     "score_self": "0",
-     "score_opp": "14",
-     "result": "other"
     },
     {
      "game_id": "254834",
@@ -7272,7 +6947,7 @@
     "東京高専",
     "高専・八王子桑志"
    ],
-   "total_games": 37,
+   "total_games": 34,
    "wins": 4,
    "loses": 30,
    "games": [
@@ -7693,32 +7368,6 @@
      "result": "lose"
     },
     {
-     "game_id": "12791",
-     "year": "2007",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権西東京大会",
-     "round": "1回戦",
-     "team_name": "東京高専",
-     "opponent": "都大泉",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "11963",
-     "year": "2007",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権西東京大会",
-     "round": "1回戦",
-     "team_name": "東京高専",
-     "opponent": "都大泉",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "3221",
      "year": "2006",
      "date": "7/16",
@@ -7730,19 +7379,6 @@
      "score_self": "1",
      "score_opp": "15",
      "result": "lose"
-    },
-    {
-     "game_id": "2830",
-     "year": "2006",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権西東京大会",
-     "round": "2回戦",
-     "team_name": "国立東京高専",
-     "opponent": "都八王子北",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "1713",
@@ -7775,7 +7411,7 @@
    "team_names": [
     "長岡高専"
    ],
-   "total_games": 43,
+   "total_games": 39,
    "wins": 14,
    "loses": 25,
    "games": [
@@ -7791,19 +7427,6 @@
      "score_self": "0",
      "score_opp": "11",
      "result": "lose"
-    },
-    {
-     "game_id": "264255",
-     "year": "2026",
-     "date": "4/27",
-     "season": "春",
-     "tournament": "春季新潟大会",
-     "round": "1回戦",
-     "team_name": "長岡高専",
-     "opponent": "高田北城",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "259121",
@@ -8183,19 +7806,6 @@
      "result": "lose"
     },
     {
-     "game_id": "38905",
-     "year": "2010",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権新潟大会",
-     "round": "2回戦",
-     "team_name": "長岡高専",
-     "opponent": "新潟県央工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "38182",
      "year": "2010",
      "date": "7/12",
@@ -8274,19 +7884,6 @@
      "result": "win"
     },
     {
-     "game_id": "22137",
-     "year": "2008",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権新潟大会",
-     "round": "2回戦",
-     "team_name": "長岡高専",
-     "opponent": "高田農",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "21145",
      "year": "2008",
      "date": "7/12",
@@ -8324,19 +7921,6 @@
      "score_self": "4",
      "score_opp": "12",
      "result": "lose"
-    },
-    {
-     "game_id": "3855",
-     "year": "2006",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権新潟大会",
-     "round": "1回戦",
-     "team_name": "長岡高専",
-     "opponent": "津南",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -8366,9 +7950,9 @@
     "長野高専",
     "須坂東・北部・坂城・長野高専"
    ],
-   "total_games": 35,
+   "total_games": 34,
    "wins": 5,
-   "loses": 30,
+   "loses": 29,
    "games": [
     {
      "game_id": "264403",
@@ -8446,19 +8030,6 @@
      "opponent": "長野日大",
      "score_self": "0",
      "score_opp": "19",
-     "result": "lose"
-    },
-    {
-     "game_id": "232101",
-     "year": "2023",
-     "date": "9/3",
-     "season": "秋",
-     "tournament": "秋季長野大会",
-     "round": "地区予選2回戦",
-     "team_name": "須坂東・北部・坂城・長野高専",
-     "opponent": "篠ノ井",
-     "score_self": "",
-     "score_opp": "",
      "result": "lose"
     },
     {
@@ -8847,7 +8418,7 @@
     "富山高専本郷",
     "富山高専本郷・富山高専射水"
    ],
-   "total_games": 21,
+   "total_games": 20,
    "wins": 3,
    "loses": 17,
    "games": [
@@ -8876,19 +8447,6 @@
      "score_self": "0",
      "score_opp": "11",
      "result": "lose"
-    },
-    {
-     "game_id": "191441",
-     "year": "2020",
-     "date": "7/25",
-     "season": "夏",
-     "tournament": "夏季富山大会",
-     "round": "2回戦",
-     "team_name": "富山高専本郷",
-     "opponent": "滑川",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "185956",
@@ -9151,9 +8709,9 @@
     "泊・上市・高専射水",
     "高専射水・高岡西"
    ],
-   "total_games": 23,
+   "total_games": 21,
    "wins": 2,
-   "loses": 20,
+   "loses": 19,
    "games": [
     {
      "game_id": "191414",
@@ -9270,19 +8828,6 @@
      "opponent": "富山いずみ",
      "score_self": "3",
      "score_opp": "8",
-     "result": "lose"
-    },
-    {
-     "game_id": "156699",
-     "year": "2017",
-     "date": "7/23",
-     "season": "夏",
-     "tournament": "選手権富山大会",
-     "round": "3回戦",
-     "team_name": "富山高専射水",
-     "opponent": "富山",
-     "score_self": "",
-     "score_opp": "",
      "result": "lose"
     },
     {
@@ -9440,19 +8985,6 @@
      "score_self": "0",
      "score_opp": "6",
      "result": "lose"
-    },
-    {
-     "game_id": "30534",
-     "year": "2009",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権富山大会",
-     "round": "1回戦",
-     "team_name": "富山商船高専",
-     "opponent": "高岡商",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -9474,7 +9006,7 @@
     "伏木・呉羽・富山高専",
     "富山高専"
    ],
-   "total_games": 26,
+   "total_games": 24,
    "wins": 6,
    "loses": 18,
    "games": [
@@ -9739,19 +9271,6 @@
      "result": "lose"
     },
     {
-     "game_id": "31745",
-     "year": "2009",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権富山大会",
-     "round": "2回戦",
-     "team_name": "富山高専",
-     "opponent": "不二越工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "30992",
      "year": "2009",
      "date": "7/19",
@@ -9763,19 +9282,6 @@
      "score_self": "7",
      "score_opp": "0",
      "result": "win"
-    },
-    {
-     "game_id": "30576",
-     "year": "2009",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権富山大会",
-     "round": "1回戦",
-     "team_name": "富山高専",
-     "opponent": "中央農",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "21976",
@@ -9834,7 +9340,7 @@
    "team_names": [
     "石川高専"
    ],
-   "total_games": 42,
+   "total_games": 39,
    "wins": 15,
    "loses": 24,
    "games": [
@@ -10333,45 +9839,6 @@
      "result": "lose"
     },
     {
-     "game_id": "4169",
-     "year": "2006",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権石川大会",
-     "round": "1回戦",
-     "team_name": "石川高専",
-     "opponent": "門前",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "3778",
-     "year": "2006",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権石川大会",
-     "round": "1回戦",
-     "team_name": "石川高専",
-     "opponent": "門前",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "3480",
-     "year": "2006",
-     "date": "7/16",
-     "season": "夏",
-     "tournament": "全国高校野球選手権石川大会",
-     "round": "1回戦",
-     "team_name": "石川高専",
-     "opponent": "門前",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "2450",
      "year": "2006",
      "date": "7/14",
@@ -10403,7 +9870,7 @@
     "国際高専",
     "金沢高専"
    ],
-   "total_games": 19,
+   "total_games": 18,
    "wins": 0,
    "loses": 18,
    "games": [
@@ -10601,19 +10068,6 @@
      "score_self": "0",
      "score_opp": "7",
      "result": "lose"
-    },
-    {
-     "game_id": "30359",
-     "year": "2009",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権石川大会",
-     "round": "1回戦",
-     "team_name": "金沢高専",
-     "opponent": "金沢西",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "20988",
@@ -11136,7 +10590,7 @@
    "team_names": [
     "沼津高専"
    ],
-   "total_games": 28,
+   "total_games": 27,
    "wins": 3,
    "loses": 24,
    "games": [
@@ -11256,19 +10710,6 @@
      "score_self": "0",
      "score_opp": "7",
      "result": "lose"
-    },
-    {
-     "game_id": "216565",
-     "year": "2022",
-     "date": "7/16",
-     "season": "夏",
-     "tournament": "選手権静岡大会",
-     "round": "2回戦",
-     "team_name": "沼津高専",
-     "opponent": "沼津商",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "203477",
@@ -11522,7 +10963,7 @@
    "team_names": [
     "豊田高専"
    ],
-   "total_games": 31,
+   "total_games": 30,
    "wins": 6,
    "loses": 24,
    "games": [
@@ -11538,19 +10979,6 @@
      "score_self": "1",
      "score_opp": "10",
      "result": "lose"
-    },
-    {
-     "game_id": "265363",
-     "year": "2026",
-     "date": "6/28",
-     "season": "夏",
-     "tournament": "選手権愛知大会",
-     "round": "1回戦",
-     "team_name": "豊田高専",
-     "opponent": "渥美農",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "261867",
@@ -11947,8 +11375,8 @@
    "team_names": [
     "岐阜高専"
    ],
-   "total_games": 37,
-   "wins": 12,
+   "total_games": 34,
+   "wins": 11,
    "loses": 23,
    "games": [
     {
@@ -12121,19 +11549,6 @@
      "result": "lose"
     },
     {
-     "game_id": "215747",
-     "year": "2022",
-     "date": "7/9",
-     "season": "夏",
-     "tournament": "全国高校野球選手権岐阜大会",
-     "round": "1回戦",
-     "team_name": "岐阜高専",
-     "opponent": "大垣工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "205688",
      "year": "2021",
      "date": "7/22",
@@ -12236,19 +11651,6 @@
      "score_self": "2",
      "score_opp": "3",
      "result": "lose"
-    },
-    {
-     "game_id": "113655",
-     "year": "2014",
-     "date": "7/13",
-     "season": "夏",
-     "tournament": "全国高校野球選手権岐阜大会",
-     "round": "3回戦",
-     "team_name": "岐阜高専",
-     "opponent": "揖斐",
-     "score_self": "3",
-     "score_opp": "1",
-     "result": "win"
     },
     {
      "game_id": "112327",
@@ -12407,19 +11809,6 @@
      "result": "lose"
     },
     {
-     "game_id": "639",
-     "year": "2006",
-     "date": "7/24",
-     "season": "夏",
-     "tournament": "全国高校野球選手権岐阜大会",
-     "round": "3回戦",
-     "team_name": "岐阜高専",
-     "opponent": "麗沢瑞浪",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "3287",
      "year": "2006",
      "date": "7/16",
@@ -12450,7 +11839,7 @@
    "team_names": [
     "近大高専"
    ],
-   "total_games": 63,
+   "total_games": 59,
    "wins": 37,
    "loses": 22,
    "games": [
@@ -12988,19 +12377,6 @@
      "result": "win"
     },
     {
-     "game_id": "49609",
-     "year": "2011",
-     "date": "7/25",
-     "season": "夏",
-     "tournament": "全国高校野球選手権三重大会",
-     "round": "準々決勝",
-     "team_name": "近大高専",
-     "opponent": "菰野",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "49576",
      "year": "2011",
      "date": "7/24",
@@ -13103,19 +12479,6 @@
      "score_self": "8",
      "score_opp": "3",
      "result": "win"
-    },
-    {
-     "game_id": "31666",
-     "year": "2009",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権三重大会",
-     "round": "4回戦",
-     "team_name": "近大高専",
-     "opponent": "南伊勢",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "31485",
@@ -13222,19 +12585,6 @@
      "result": "win"
     },
     {
-     "game_id": "14220",
-     "year": "2007",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権三重大会",
-     "round": "3回戦",
-     "team_name": "近大高専",
-     "opponent": "名張",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "13354",
      "year": "2007",
      "date": "7/18",
@@ -13246,19 +12596,6 @@
      "score_self": "4",
      "score_opp": "0",
      "result": "win"
-    },
-    {
-     "game_id": "13056",
-     "year": "2007",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権三重大会",
-     "round": "2回戦",
-     "team_name": "近大高専",
-     "opponent": "四日市西",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "2878",
@@ -13291,7 +12628,7 @@
    "team_names": [
     "鳥羽商船高専"
    ],
-   "total_games": 10,
+   "total_games": 8,
    "wins": 1,
    "loses": 7,
    "games": [
@@ -13333,19 +12670,6 @@
      "score_self": "0",
      "score_opp": "11",
      "result": "lose"
-    },
-    {
-     "game_id": "48316",
-     "year": "2011",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "選手権三重大会",
-     "round": "2回戦",
-     "team_name": "鳥羽商船高専",
-     "opponent": "津西",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "other"
     },
     {
      "game_id": "40251",
@@ -13400,19 +12724,6 @@
      "result": "lose"
     },
     {
-     "game_id": "14223",
-     "year": "2007",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "選手権三重大会",
-     "round": "3回戦",
-     "team_name": "鳥羽商船高専",
-     "opponent": "宇治山田商",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "other"
-    },
-    {
      "game_id": "12509",
      "year": "2007",
      "date": "7/16",
@@ -13443,9 +12754,9 @@
    "team_names": [
     "舞鶴高専"
    ],
-   "total_games": 31,
+   "total_games": 25,
    "wins": 2,
-   "loses": 25,
+   "loses": 23,
    "games": [
     {
      "game_id": "262551",
@@ -13500,19 +12811,6 @@
      "result": "lose"
     },
     {
-     "game_id": "244596",
-     "year": "2024",
-     "date": "9/1",
-     "season": "秋",
-     "tournament": "秋季京都大会",
-     "round": "2回戦",
-     "team_name": "舞鶴高専",
-     "opponent": "同志社",
-     "score_self": "",
-     "score_opp": "",
-     "result": "lose"
-    },
-    {
      "game_id": "242374",
      "year": "2024",
      "date": "7/16",
@@ -13549,19 +12847,6 @@
      "opponent": "福知山成美",
      "score_self": "0",
      "score_opp": "18",
-     "result": "lose"
-    },
-    {
-     "game_id": "231823",
-     "year": "2023",
-     "date": "9/2",
-     "season": "秋",
-     "tournament": "秋季京都大会",
-     "round": "2回戦",
-     "team_name": "舞鶴高専",
-     "opponent": "北嵯峨",
-     "score_self": "",
-     "score_opp": "",
      "result": "lose"
     },
     {
@@ -13797,58 +13082,6 @@
      "score_self": "4",
      "score_opp": "8",
      "result": "lose"
-    },
-    {
-     "game_id": "4484",
-     "year": "2006",
-     "date": "7/19",
-     "season": "夏",
-     "tournament": "全国高校野球選手権京都大会",
-     "round": "1回戦",
-     "team_name": "舞鶴高専",
-     "opponent": "加悦谷",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "4199",
-     "year": "2006",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権京都大会",
-     "round": "1回戦",
-     "team_name": "舞鶴高専",
-     "opponent": "加悦谷",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "3759",
-     "year": "2006",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権京都大会",
-     "round": "1回戦",
-     "team_name": "舞鶴高専",
-     "opponent": "加悦谷",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "3505",
-     "year": "2006",
-     "date": "7/16",
-     "season": "夏",
-     "tournament": "全国高校野球選手権京都大会",
-     "round": "1回戦",
-     "team_name": "舞鶴高専",
-     "opponent": "加悦谷",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -13876,9 +13109,9 @@
     "府立高専",
     "枚方なぎさ・大阪公大高専"
    ],
-   "total_games": 37,
+   "total_games": 31,
    "wins": 1,
-   "loses": 32,
+   "loses": 30,
    "games": [
     {
      "game_id": "263090",
@@ -13959,32 +13192,6 @@
      "result": "lose"
     },
     {
-     "game_id": "241741",
-     "year": "2024",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "選手権大阪大会",
-     "round": "2回戦",
-     "team_name": "大阪公大高専",
-     "opponent": "高槻北",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
-    },
-    {
-     "game_id": "237827",
-     "year": "2024",
-     "date": "4/14",
-     "season": "春",
-     "tournament": "春季大阪大会",
-     "round": "2回戦",
-     "team_name": "大阪公大高専",
-     "opponent": "清教学園",
-     "score_self": "",
-     "score_opp": "",
-     "result": "lose"
-    },
-    {
      "game_id": "232506",
      "year": "2023",
      "date": "9/9",
@@ -14034,19 +13241,6 @@
      "opponent": "常翔啓光学園",
      "score_self": "0",
      "score_opp": "11",
-     "result": "lose"
-    },
-    {
-     "game_id": "207051",
-     "year": "2021",
-     "date": "8/28",
-     "season": "秋",
-     "tournament": "秋季大阪大会",
-     "round": "1回戦",
-     "team_name": "大阪府大高専",
-     "opponent": "箕面学園",
-     "score_self": "",
-     "score_opp": "",
      "result": "lose"
     },
     {
@@ -14310,19 +13504,6 @@
      "result": "lose"
     },
     {
-     "game_id": "11738",
-     "year": "2007",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権大阪大会",
-     "round": "1回戦",
-     "team_name": "大阪高専",
-     "opponent": "池田",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "519",
      "year": "2006",
      "date": "7/23",
@@ -14334,32 +13515,6 @@
      "score_self": "4",
      "score_opp": "5",
      "result": "lose"
-    },
-    {
-     "game_id": "5024",
-     "year": "2006",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権大阪大会",
-     "round": "2回戦",
-     "team_name": "府立高専",
-     "opponent": "東淀工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "3900",
-     "year": "2006",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権大阪大会",
-     "round": "2回戦",
-     "team_name": "府立高専",
-     "opponent": "東淀工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -14379,7 +13534,7 @@
    "team_names": [
     "神戸高専"
    ],
-   "total_games": 41,
+   "total_games": 36,
    "wins": 12,
    "loses": 24,
    "games": [
@@ -14748,32 +13903,6 @@
      "result": "lose"
     },
     {
-     "game_id": "48682",
-     "year": "2011",
-     "date": "7/19",
-     "season": "夏",
-     "tournament": "全国高校野球選手権兵庫大会",
-     "round": "3回戦",
-     "team_name": "神戸高専",
-     "opponent": "須磨学園",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "48342",
-     "year": "2011",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権兵庫大会",
-     "round": "3回戦",
-     "team_name": "神戸高専",
-     "opponent": "須磨学園",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "47522",
      "year": "2011",
      "date": "7/16",
@@ -14876,45 +14005,6 @@
      "score_self": "3",
      "score_opp": "9",
      "result": "lose"
-    },
-    {
-     "game_id": "5119",
-     "year": "2006",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権兵庫大会",
-     "round": "2回戦",
-     "team_name": "神戸高専",
-     "opponent": "県尼崎",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "4304",
-     "year": "2006",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権兵庫大会",
-     "round": "2回戦",
-     "team_name": "神戸高専",
-     "opponent": "県尼崎",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "3934",
-     "year": "2006",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権兵庫大会",
-     "round": "2回戦",
-     "team_name": "神戸高専",
-     "opponent": "県尼崎",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -15385,9 +14475,9 @@
    "team_names": [
     "奈良高専"
    ],
-   "total_games": 33,
+   "total_games": 31,
    "wins": 7,
-   "loses": 25,
+   "loses": 24,
    "games": [
     {
      "game_id": "263532",
@@ -15572,19 +14662,6 @@
      "result": "lose"
     },
     {
-     "game_id": "183271",
-     "year": "2019",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権奈良大会",
-     "round": "2回戦",
-     "team_name": "奈良高専",
-     "opponent": "高田商",
-     "score_self": "1",
-     "score_opp": "7",
-     "result": "lose"
-    },
-    {
      "game_id": "169045",
      "year": "2018",
      "date": "7/16",
@@ -15741,19 +14818,6 @@
      "result": "win"
     },
     {
-     "game_id": "48348",
-     "year": "2011",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権奈良大会",
-     "round": "2回戦",
-     "team_name": "奈良高専",
-     "opponent": "吉野",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "39730",
      "year": "2010",
      "date": "7/18",
@@ -15836,7 +14900,7 @@
    "team_names": [
     "和歌山高専"
    ],
-   "total_games": 36,
+   "total_games": 35,
    "wins": 11,
    "loses": 24,
    "games": [
@@ -15878,19 +14942,6 @@
      "score_self": "0",
      "score_opp": "6",
      "result": "lose"
-    },
-    {
-     "game_id": "256043",
-     "year": "2025",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "選手権和歌山大会",
-     "round": "2回戦",
-     "team_name": "和歌山高専",
-     "opponent": "田辺",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "251314",
@@ -16326,7 +15377,7 @@
    "team_names": [
     "米子高専"
    ],
-   "total_games": 30,
+   "total_games": 29,
    "wins": 4,
    "loses": 25,
    "games": [
@@ -16695,19 +15746,6 @@
      "result": "lose"
     },
     {
-     "game_id": "12746",
-     "year": "2007",
-     "date": "7/16",
-     "season": "夏",
-     "tournament": "全国高校野球選手権鳥取大会",
-     "round": "1回戦",
-     "team_name": "米子高専",
-     "opponent": "八頭",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "4943",
      "year": "2006",
      "date": "7/21",
@@ -16738,9 +15776,9 @@
    "team_names": [
     "松江高専"
    ],
-   "total_games": 35,
+   "total_games": 29,
    "wins": 4,
-   "loses": 26,
+   "loses": 25,
    "games": [
     {
      "game_id": "263804",
@@ -17016,19 +16054,6 @@
      "result": "lose"
     },
     {
-     "game_id": "103039",
-     "year": "2013",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権島根大会",
-     "round": "1回戦",
-     "team_name": "松江高専",
-     "opponent": "大東",
-     "score_self": "0",
-     "score_opp": "3",
-     "result": "lose"
-    },
-    {
      "game_id": "57211",
      "year": "2012",
      "date": "7/17",
@@ -17107,32 +16132,6 @@
      "result": "lose"
     },
     {
-     "game_id": "12239",
-     "year": "2007",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権島根大会",
-     "round": "1回戦",
-     "team_name": "松江高専",
-     "opponent": "益田産・翔陽",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "11889",
-     "year": "2007",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権島根大会",
-     "round": "1回戦",
-     "team_name": "松江高専",
-     "opponent": "益田産・翔陽",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "5812",
      "year": "2006",
      "date": "7/23",
@@ -17157,45 +16156,6 @@
      "score_self": "5",
      "score_opp": "2",
      "result": "win"
-    },
-    {
-     "game_id": "4322",
-     "year": "2006",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権島根大会",
-     "round": "1回戦",
-     "team_name": "松江高専",
-     "opponent": "明誠",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "3947",
-     "year": "2006",
-     "date": "7/17",
-     "season": "夏",
-     "tournament": "全国高校野球選手権島根大会",
-     "round": "1回戦",
-     "team_name": "松江高専",
-     "opponent": "明誠",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "3355",
-     "year": "2006",
-     "date": "7/16",
-     "season": "夏",
-     "tournament": "全国高校野球選手権島根大会",
-     "round": "1回戦",
-     "team_name": "松江高専",
-     "opponent": "明誠",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -17640,7 +16600,7 @@
    "team_names": [
     "呉高専"
    ],
-   "total_games": 30,
+   "total_games": 29,
    "wins": 5,
    "loses": 24,
    "games": [
@@ -17799,19 +16759,6 @@
      "score_self": "5",
      "score_opp": "9",
      "result": "lose"
-    },
-    {
-     "game_id": "183997",
-     "year": "2019",
-     "date": "7/22",
-     "season": "夏",
-     "tournament": "全国高校野球選手権広島大会",
-     "round": "3回戦",
-     "team_name": "呉高専",
-     "opponent": "尾道商",
-     "score_self": "1",
-     "score_opp": "1",
-     "result": "draw"
     },
     {
      "game_id": "183331",
@@ -18052,7 +16999,7 @@
    "team_names": [
     "広島商船高専"
    ],
-   "total_games": 30,
+   "total_games": 29,
    "wins": 6,
    "loses": 23,
    "games": [
@@ -18107,19 +17054,6 @@
      "score_self": "0",
      "score_opp": "10",
      "result": "lose"
-    },
-    {
-     "game_id": "241928",
-     "year": "2024",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "選手権広島大会",
-     "round": "2回戦",
-     "team_name": "広島商船高専",
-     "opponent": "竹原",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "229852",
@@ -18464,7 +17398,7 @@
    "team_names": [
     "徳山高専"
    ],
-   "total_games": 34,
+   "total_games": 32,
    "wins": 7,
    "loses": 25,
    "games": [
@@ -18781,19 +17715,6 @@
      "result": "lose"
     },
     {
-     "game_id": "56140",
-     "year": "2012",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権山口大会",
-     "round": "1回戦",
-     "team_name": "徳山高専",
-     "opponent": "防府",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "47413",
      "year": "2011",
      "date": "7/15",
@@ -18885,19 +17806,6 @@
      "result": "lose"
     },
     {
-     "game_id": "5069",
-     "year": "2006",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権山口大会",
-     "round": "2回戦",
-     "team_name": "徳山高専",
-     "opponent": "岩国商",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "3901",
      "year": "2006",
      "date": "7/17",
@@ -18928,7 +17836,7 @@
    "team_names": [
     "宇部高専"
    ],
-   "total_games": 39,
+   "total_games": 37,
    "wins": 13,
    "loses": 24,
    "games": [
@@ -19245,19 +18153,6 @@
      "result": "lose"
     },
     {
-     "game_id": "56139",
-     "year": "2012",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権山口大会",
-     "round": "1回戦",
-     "team_name": "宇部高専",
-     "opponent": "宇部商",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "47374",
      "year": "2011",
      "date": "7/15",
@@ -19375,19 +18270,6 @@
      "result": "win"
     },
     {
-     "game_id": "12398",
-     "year": "2007",
-     "date": "7/16",
-     "season": "夏",
-     "tournament": "全国高校野球選手権山口大会",
-     "round": "1回戦",
-     "team_name": "宇部高専",
-     "opponent": "厚狭",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "1009",
      "year": "2006",
      "date": "7/26",
@@ -19460,7 +18342,7 @@
     "大島商船高専",
     "高森・大島商船高専・岩国総合"
    ],
-   "total_games": 35,
+   "total_games": 32,
    "wins": 6,
    "loses": 26,
    "games": [
@@ -19777,19 +18659,6 @@
      "result": "lose"
     },
     {
-     "game_id": "56142",
-     "year": "2012",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権山口大会",
-     "round": "1回戦",
-     "team_name": "大島商船高専",
-     "opponent": "周防大島",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "47439",
      "year": "2011",
      "date": "7/15",
@@ -19827,19 +18696,6 @@
      "score_self": "6",
      "score_opp": "7",
      "result": "lose"
-    },
-    {
-     "game_id": "31598",
-     "year": "2009",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権山口大会",
-     "round": "2回戦",
-     "team_name": "大島商船高専",
-     "opponent": "下松",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "31124",
@@ -19894,19 +18750,6 @@
      "result": "lose"
     },
     {
-     "game_id": "12396",
-     "year": "2007",
-     "date": "7/16",
-     "season": "夏",
-     "tournament": "全国高校野球選手権山口大会",
-     "round": "1回戦",
-     "team_name": "大島商船高専",
-     "opponent": "南陽工",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "3903",
      "year": "2006",
      "date": "7/17",
@@ -19940,7 +18783,7 @@
     "阿南高専",
     "阿南高専・脇町"
    ],
-   "total_games": 38,
+   "total_games": 37,
    "wins": 9,
    "loses": 27,
    "games": [
@@ -20361,19 +19204,6 @@
      "result": "lose"
     },
     {
-     "game_id": "38539",
-     "year": "2010",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権徳島大会",
-     "round": "1回戦",
-     "team_name": "阿南高専",
-     "opponent": "城北",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "29062",
      "year": "2009",
      "date": "7/12",
@@ -20458,7 +19288,7 @@
     "笠田・香川高専詫間",
     "香川高専詫間"
    ],
-   "total_games": 23,
+   "total_games": 22,
    "wins": 0,
    "loses": 22,
    "games": [
@@ -20578,19 +19408,6 @@
      "score_self": "0",
      "score_opp": "4",
      "result": "lose"
-    },
-    {
-     "game_id": "191963",
-     "year": "2020",
-     "date": "7/24",
-     "season": "夏",
-     "tournament": "夏季香川大会",
-     "round": "2回戦",
-     "team_name": "香川高専詫間",
-     "opponent": "高松工芸",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "188070",
@@ -20780,7 +19597,7 @@
     "香川高専高松",
     "高松高専"
    ],
-   "total_games": 45,
+   "total_games": 42,
    "wins": 18,
    "loses": 24,
    "games": [
@@ -21162,32 +19979,6 @@
      "result": "lose"
     },
     {
-     "game_id": "48703",
-     "year": "2011",
-     "date": "7/19",
-     "season": "夏",
-     "tournament": "全国高校野球選手権香川大会",
-     "round": "2回戦",
-     "team_name": "香川高専高松",
-     "opponent": "大手前高松",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "48361",
-     "year": "2011",
-     "date": "7/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権香川大会",
-     "round": "2回戦",
-     "team_name": "香川高専高松",
-     "opponent": "大手前高松",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "39776",
      "year": "2010",
      "date": "7/18",
@@ -21292,19 +20083,6 @@
      "result": "win"
     },
     {
-     "game_id": "11559",
-     "year": "2007",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権香川大会",
-     "round": "1回戦",
-     "team_name": "高松高専",
-     "opponent": "丸亀城西",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "11446",
      "year": "2007",
      "date": "7/13",
@@ -21390,9 +20168,9 @@
     "土居・西条農・新居浜高専",
     "新居浜高専"
    ],
-   "total_games": 34,
+   "total_games": 32,
    "wins": 6,
-   "loses": 28,
+   "loses": 26,
    "games": [
     {
      "game_id": "261629",
@@ -21486,19 +20264,6 @@
      "result": "lose"
     },
     {
-     "game_id": "232400",
-     "year": "2023",
-     "date": "9/10",
-     "season": "秋",
-     "tournament": "秋季愛媛大会",
-     "round": "予選1回戦",
-     "team_name": "新居浜高専",
-     "opponent": "宇和・八幡浜工",
-     "score_self": "",
-     "score_opp": "",
-     "result": "lose"
-    },
-    {
      "game_id": "229948",
      "year": "2023",
      "date": "7/16",
@@ -21561,19 +20326,6 @@
      "opponent": "丹原",
      "score_self": "1",
      "score_opp": "8",
-     "result": "lose"
-    },
-    {
-     "game_id": "204679",
-     "year": "2021",
-     "date": "7/15",
-     "season": "夏",
-     "tournament": "全国高校野球選手権愛媛大会",
-     "round": "2回戦",
-     "team_name": "新居浜高専",
-     "opponent": "丹原",
-     "score_self": "3",
-     "score_opp": "7",
      "result": "lose"
     },
     {
@@ -21854,9 +20606,9 @@
    "team_names": [
     "弓削商船高専"
    ],
-   "total_games": 32,
+   "total_games": 27,
    "wins": 4,
-   "loses": 24,
+   "loses": 23,
    "games": [
     {
      "game_id": "254092",
@@ -21947,19 +20699,6 @@
      "opponent": "伊予",
      "score_self": "4",
      "score_opp": "9",
-     "result": "lose"
-    },
-    {
-     "game_id": "220676",
-     "year": "2022",
-     "date": "9/10",
-     "season": "秋",
-     "tournament": "秋季愛媛大会",
-     "round": "東予地区1回戦",
-     "team_name": "弓削商船高専",
-     "opponent": "土居・西条農",
-     "score_self": "",
-     "score_opp": "",
      "result": "lose"
     },
     {
@@ -22145,32 +20884,6 @@
      "result": "lose"
     },
     {
-     "game_id": "31626",
-     "year": "2009",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権愛媛大会",
-     "round": "2回戦",
-     "team_name": "弓削商船高専",
-     "opponent": "松山中央",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "31457",
-     "year": "2009",
-     "date": "7/20",
-     "season": "夏",
-     "tournament": "全国高校野球選手権愛媛大会",
-     "round": "2回戦",
-     "team_name": "弓削商船高専",
-     "opponent": "松山中央",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "30096",
      "year": "2009",
      "date": "7/15",
@@ -22236,32 +20949,6 @@
      "result": "lose"
     },
     {
-     "game_id": "5203",
-     "year": "2006",
-     "date": "7/21",
-     "season": "夏",
-     "tournament": "全国高校野球選手権愛媛大会",
-     "round": "2回戦",
-     "team_name": "弓削商船高専",
-     "opponent": "松山商",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
-     "game_id": "4660",
-     "year": "2006",
-     "date": "7/19",
-     "season": "夏",
-     "tournament": "全国高校野球選手権愛媛大会",
-     "round": "2回戦",
-     "team_name": "弓削商船高専",
-     "opponent": "松山商",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "3365",
      "year": "2006",
      "date": "7/16",
@@ -22295,7 +20982,7 @@
     "室戸・高知高専",
     "高知高専"
    ],
-   "total_games": 35,
+   "total_games": 34,
    "wins": 7,
    "loses": 27,
    "games": [
@@ -22625,19 +21312,6 @@
      "result": "lose"
     },
     {
-     "game_id": "56003",
-     "year": "2012",
-     "date": "7/14",
-     "season": "夏",
-     "tournament": "全国高校野球選手権高知大会",
-     "round": "2回戦",
-     "team_name": "高知高専",
-     "opponent": "高知農",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "48908",
      "year": "2011",
      "date": "7/21",
@@ -22774,9 +21448,9 @@
     "北九州高専",
     "北九州高専・遠賀・築上西"
    ],
-   "total_games": 26,
+   "total_games": 25,
    "wins": 1,
-   "loses": 25,
+   "loses": 24,
    "games": [
     {
      "game_id": "261879",
@@ -22841,19 +21515,6 @@
      "opponent": "育徳館",
      "score_self": "0",
      "score_opp": "13",
-     "result": "lose"
-    },
-    {
-     "game_id": "236057",
-     "year": "2024",
-     "date": "3/20",
-     "season": "春",
-     "tournament": "春季福岡大会",
-     "round": "2回戦",
-     "team_name": "北九州高専",
-     "opponent": "玄界",
-     "score_self": "",
-     "score_opp": "",
      "result": "lose"
     },
     {
@@ -23134,23 +21795,10 @@
    "team_names": [
     "有明高専"
    ],
-   "total_games": 35,
+   "total_games": 31,
    "wins": 7,
    "loses": 24,
    "games": [
-    {
-     "game_id": "265634",
-     "year": "2026",
-     "date": "7/5",
-     "season": "夏",
-     "tournament": "選手権福岡大会",
-     "round": "1回戦",
-     "team_name": "有明高専",
-     "opponent": "西日本短大付",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
-    },
     {
      "game_id": "261594",
      "year": "2026",
@@ -23425,19 +22073,6 @@
      "result": "lose"
     },
     {
-     "game_id": "55367",
-     "year": "2012",
-     "date": "7/11",
-     "season": "夏",
-     "tournament": "全国高校野球選手権福岡大会",
-     "round": "2回戦",
-     "team_name": "有明高専",
-     "opponent": "西南学院",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "55022",
      "year": "2012",
      "date": "7/8",
@@ -23516,19 +22151,6 @@
      "result": "lose"
     },
     {
-     "game_id": "28665",
-     "year": "2009",
-     "date": "7/11",
-     "season": "夏",
-     "tournament": "全国高校野球選手権福岡大会",
-     "round": "3回戦",
-     "team_name": "有明高専",
-     "opponent": "糸島",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "28608",
      "year": "2009",
      "date": "7/9",
@@ -23540,19 +22162,6 @@
      "score_self": "3",
      "score_opp": "2",
      "result": "win"
-    },
-    {
-     "game_id": "28582",
-     "year": "2009",
-     "date": "7/8",
-     "season": "夏",
-     "tournament": "全国高校野球選手権福岡大会",
-     "round": "2回戦",
-     "team_name": "有明高専",
-     "opponent": "西日本短大付",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "20593",
@@ -24099,7 +22708,7 @@
     "佐世保高専",
     "西海学園・佐世保高専・佐世保商・佐世保西"
    ],
-   "total_games": 36,
+   "total_games": 35,
    "wins": 10,
    "loses": 25,
    "games": [
@@ -24557,19 +23166,6 @@
      "score_self": "3",
      "score_opp": "1",
      "result": "win"
-    },
-    {
-     "game_id": "2006",
-     "year": "2006",
-     "date": "7/10",
-     "season": "夏",
-     "tournament": "全国高校野球選手権長崎大会",
-     "round": "1回戦",
-     "team_name": "佐世保高専",
-     "opponent": "国見",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     }
    ]
   },
@@ -24593,23 +23189,10 @@
     "熊本高専八代",
     "熊本高専八代・甲佐"
    ],
-   "total_games": 35,
+   "total_games": 33,
    "wins": 8,
    "loses": 25,
    "games": [
-    {
-     "game_id": "265571",
-     "year": "2026",
-     "date": "7/5",
-     "season": "夏",
-     "tournament": "選手権熊本大会",
-     "round": "1回戦",
-     "team_name": "熊本高専八代",
-     "opponent": "小国",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
-    },
     {
      "game_id": "261611",
      "year": "2026",
@@ -24713,19 +23296,6 @@
      "score_self": "3",
      "score_opp": "0",
      "result": "win"
-    },
-    {
-     "game_id": "241110",
-     "year": "2024",
-     "date": "7/11",
-     "season": "夏",
-     "tournament": "選手権熊本大会",
-     "round": "2回戦",
-     "team_name": "熊本高専八代",
-     "opponent": "人吉",
-     "score_self": "",
-     "score_opp": "",
-     "result": "other"
     },
     {
      "game_id": "236576",
@@ -25085,8 +23655,8 @@
     "鹿本商工・熊本高専熊本・菊池農",
     "鹿本商工・玉名・熊本高専熊本・菊池農"
    ],
-   "total_games": 45,
-   "wins": 11,
+   "total_games": 42,
+   "wins": 10,
    "loses": 31,
    "games": [
     {
@@ -25246,19 +23816,6 @@
      "result": "lose"
     },
     {
-     "game_id": "233642",
-     "year": "2023",
-     "date": "9/18",
-     "season": "秋",
-     "tournament": "秋季熊本大会",
-     "round": "1回戦",
-     "team_name": "鹿本商工・玉名・熊本高専熊本・菊池農",
-     "opponent": "天草拓心",
-     "score_self": "",
-     "score_opp": "",
-     "result": "win"
-    },
-    {
      "game_id": "229389",
      "year": "2023",
      "date": "7/13",
@@ -25270,19 +23827,6 @@
      "score_self": "1",
      "score_opp": "7",
      "result": "lose"
-    },
-    {
-     "game_id": "229028",
-     "year": "2023",
-     "date": "7/12",
-     "season": "夏",
-     "tournament": "選手権熊本大会",
-     "round": "1回戦",
-     "team_name": "熊本高専熊本・菊池農",
-     "opponent": "鹿本",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "other"
     },
     {
      "game_id": "223870",
@@ -25413,19 +23957,6 @@
      "score_self": "1",
      "score_opp": "12",
      "result": "lose"
-    },
-    {
-     "game_id": "180966",
-     "year": "2019",
-     "date": "7/10",
-     "season": "夏",
-     "tournament": "選手権熊本大会",
-     "round": "1回戦",
-     "team_name": "熊本高専熊本",
-     "opponent": "開新",
-     "score_self": "1",
-     "score_opp": "0",
-     "result": "other"
     },
     {
      "game_id": "166893",
@@ -25692,9 +24223,9 @@
    "team_names": [
     "大分高専"
    ],
-   "total_games": 37,
+   "total_games": 35,
    "wins": 10,
-   "loses": 26,
+   "loses": 25,
    "games": [
     {
      "game_id": "262056",
@@ -25837,19 +24368,6 @@
      "opponent": "大分東",
      "score_self": "1",
      "score_opp": "2",
-     "result": "lose"
-    },
-    {
-     "game_id": "228426",
-     "year": "2023",
-     "date": "7/10",
-     "season": "夏",
-     "tournament": "全国高校野球選手権大分大会",
-     "round": "1回戦",
-     "team_name": "大分高専",
-     "opponent": "大分東",
-     "score_self": "0",
-     "score_opp": "1",
      "result": "lose"
     },
     {
@@ -26087,19 +24605,6 @@
      "result": "lose"
     },
     {
-     "game_id": "31285",
-     "year": "2009",
-     "date": "7/20",
-     "season": "夏",
-     "tournament": "全国高校野球選手権大分大会",
-     "round": "3回戦",
-     "team_name": "大分高専",
-     "opponent": "明豊",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "30202",
      "year": "2009",
      "date": "7/16",
@@ -26201,7 +24706,7 @@
     "飯野・都城高専",
     "高城・都城高専"
    ],
-   "total_games": 35,
+   "total_games": 33,
    "wins": 4,
    "loses": 29,
    "games": [
@@ -26217,19 +24722,6 @@
      "score_self": "1",
      "score_opp": "14",
      "result": "lose"
-    },
-    {
-     "game_id": "261711",
-     "year": "2026",
-     "date": "3/22",
-     "season": "春",
-     "tournament": "春季宮崎大会",
-     "round": "2回戦",
-     "team_name": "都城高専",
-     "opponent": "宮崎南",
-     "score_self": "0",
-     "score_opp": "12",
-     "result": "other"
     },
     {
      "game_id": "259184",
@@ -26635,19 +25127,6 @@
      "result": "lose"
     },
     {
-     "game_id": "11508",
-     "year": "2007",
-     "date": "7/13",
-     "season": "夏",
-     "tournament": "全国高校野球選手権宮崎大会",
-     "round": "1回戦",
-     "team_name": "都城高専",
-     "opponent": "本庄",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "1763",
      "year": "2006",
      "date": "7/9",
@@ -26678,7 +25157,7 @@
    "team_names": [
     "鹿児島高専"
    ],
-   "total_games": 36,
+   "total_games": 35,
    "wins": 9,
    "loses": 25,
    "games": [
@@ -26995,19 +25474,6 @@
      "result": "lose"
     },
     {
-     "game_id": "54737",
-     "year": "2012",
-     "date": "7/7",
-     "season": "夏",
-     "tournament": "全国高校野球選手権鹿児島大会",
-     "round": "1回戦",
-     "team_name": "鹿児島高専",
-     "opponent": "樟南二",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
-    },
-    {
      "game_id": "46823",
      "year": "2011",
      "date": "7/13",
@@ -27174,7 +25640,7 @@
     "本部・名護商工・北部農林・沖縄高専",
     "沖縄高専"
    ],
-   "total_games": 34,
+   "total_games": 33,
    "wins": 6,
    "loses": 27,
    "games": [
@@ -27580,19 +26046,6 @@
      "score_self": "4",
      "score_opp": "3",
      "result": "win"
-    },
-    {
-     "game_id": "10641",
-     "year": "2007",
-     "date": "6/18",
-     "season": "夏",
-     "tournament": "全国高校野球選手権沖縄大会",
-     "round": "1回戦",
-     "team_name": "沖縄高専",
-     "opponent": "向陽",
-     "score_self": "0",
-     "score_opp": "0",
-     "result": "draw"
     },
     {
      "game_id": "1572",
