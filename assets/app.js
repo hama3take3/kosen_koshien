@@ -351,18 +351,20 @@
     }
   }
 
-  // 固定コールバック名 jsonpcall のため、リクエストは直列キューで処理する
+  // 固定コールバック名のJSONP。リクエストは直列キューで処理する。
+  // cbName: api.base.asahi.com は "jsonpcall"、日程JSONは "chihou_game_day(s)"
   var jsonpQueue = Promise.resolve();
-  function jsonp(url, timeout) {
+  function jsonp(url, timeout, cbName) {
+    cbName = cbName || "jsonpcall";
     function run() {
       return new Promise(function (resolve, reject) {
         var done = false, s = document.createElement("script");
         function cb(d) { if (done) return; done = true; cleanup(); resolve(d); }
         function cleanup() {
-          if (window.jsonpcall === cb) { try { delete window.jsonpcall; } catch (e) { window.jsonpcall = undefined; } }
+          if (window[cbName] === cb) { try { delete window[cbName]; } catch (e) { window[cbName] = undefined; } }
           if (s.parentNode) s.parentNode.removeChild(s);
         }
-        window.jsonpcall = cb;
+        window[cbName] = cb;
         s.onerror = function () { if (done) return; done = true; cleanup(); reject(new Error("load")); };
         s.src = url;
         document.head.appendChild(s);
@@ -428,6 +430,11 @@
     }
 
     if (!anyOk) { $live.hidden = true; return; }
+    // 最新データで記録・地図・開催中ボードを再描画し、勝ち残り校の次戦を取得
+    renderRecords();
+    renderMap();
+    renderCurrent();
+    await fetchNextGames();
     var now = new Date();
     var stamp = (now.getMonth() + 1) + "/" + now.getDate() + " " + now.getHours() + ":" + String(now.getMinutes()).padStart(2, "0");
     var msg = (totalNew ? "新着 " + totalNew + " 試合を追加" : "最新の結果に更新済み") +
@@ -465,31 +472,40 @@
     return n.replace(/(県|府|都)$/, "");
   }
 
+  var mapClickBound = false;
   function renderMap() {
     var $map = document.getElementById("jpMap");
     if (!$map) return;
     $map.style.gridTemplateColumns = "repeat(" + MAP_COLS + ", 1fr)";
     $map.style.gridTemplateRows = "repeat(" + MAP_ROWS + ", 1fr)";
     var byp = schoolsByPref();
+    var cur = computeCurrent();               // 開催中の勝ち残り/敗退の県別状態
     $map.innerHTML = PREFS.map(function (p) {
       var name = p[0], r = p[1], c = p[2];
       var list = byp[name] || [];
       var has = list.length > 0;
+      var st = cur.prefStatus[name];          // "alive" | "out" | undefined
+      var cls = "pref-tile" + (has ? " has" : "") + (st === "alive" ? " alive-p" : st === "out" ? " out-p" : "");
       var cnt = has ? '<span class="pt-c">' + list.length + '</span>' : '';
-      return '<div class="pref-tile ' + (has ? "has" : "") + '" style="grid-row:' + r + ';grid-column:' + c + '"' +
-        (has ? ' data-pref="' + esc(name) + '" title="' + esc(name) + '（' + list.length + '校）"' : '') +
+      var titleStatus = st === "alive" ? "・勝ち残り" : st === "out" ? "・敗退" : "";
+      return '<div class="' + cls + '" style="grid-row:' + r + ';grid-column:' + c + '"' +
+        (has ? ' data-pref="' + esc(name) + '" title="' + esc(name) + '（' + list.length + '校）' + titleStatus + '"' : '') +
         '><span class="pt-n">' + esc(prefShort(name)) + '</span>' + cnt + '</div>';
     }).join("");
-    $map.addEventListener("click", function (e) {
-      var t = e.target.closest(".pref-tile.has"); if (!t) return;
-      var pref = t.getAttribute("data-pref");
-      state.pref = (state.pref === pref) ? "" : pref;   // 同じ県を再クリックで解除
-      if (state.pref) { state.region = "all"; syncRegionTabs(); }
-      updateMapActive();
-      render();
-      var grid = document.getElementById("schoolGrid");
-      if (state.pref && grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
+    updateMapActive();
+    if (!mapClickBound) {
+      mapClickBound = true;
+      $map.addEventListener("click", function (e) {
+        var t = e.target.closest(".pref-tile[data-pref]"); if (!t) return;
+        var pref = t.getAttribute("data-pref");
+        state.pref = (state.pref === pref) ? "" : pref;   // 同じ県を再クリックで解除
+        if (state.pref) { state.region = "all"; syncRegionTabs(); }
+        updateMapActive();
+        render();
+        var grid = document.getElementById("schoolGrid");
+        if (state.pref && grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
   }
 
   function updateMapActive() {
@@ -524,19 +540,14 @@
     var p = (g.date || "").split("/");
     return (parseInt(p[0], 10) || 0) * 100 + (parseInt(p[1], 10) || 0);
   }
-  function renderCurrent() {
-    var $sec = document.getElementById("currentSection");
-    if (!$sec) return;
-    // 夏の最新年度＝開催中の大会年
+  // 開催中（＝夏の最新年度）の状態をまとめて算出
+  function computeCurrent() {
     var curYear = "";
     schools.forEach(function (s) {
-      s.games.forEach(function (g) {
-        if (g.season === "夏" && (!curYear || g.year > curYear)) curYear = g.year;
-      });
+      s.games.forEach(function (g) { if (g.season === "夏" && (!curYear || g.year > curYear)) curYear = g.year; });
     });
-    if (!curYear) { $sec.hidden = true; return; }
-
-    var alive = [], out = [];
+    var alive = [], out = [], prefStatus = {};
+    if (!curYear) return { curYear: "", alive: alive, out: out, prefStatus: prefStatus };
     schools.forEach(function (s) {
       var gs = s.games.filter(function (g) { return g.season === "夏" && g.year === curYear; });
       if (!gs.length) return;
@@ -544,56 +555,187 @@
       var last = gs[gs.length - 1];
       var wins = gs.filter(function (g) { return g.result === "win"; }).length;
       var entry = { s: s, last: last, wins: wins, played: gs.length };
-      if (last.result === "lose") out.push(entry); else alive.push(entry);
+      if (last.result === "lose") { out.push(entry); if (prefStatus[s.prefecture] !== "alive") prefStatus[s.prefecture] = "out"; }
+      else { alive.push(entry); prefStatus[s.prefecture] = "alive"; }
     });
+    return { curYear: curYear, alive: alive, out: out, prefStatus: prefStatus };
+  }
 
-    if (!alive.length && !out.length) { $sec.hidden = true; return; }
+  function nextGameHtml(s) {
+    var ng = s.next_game;
+    if (ng && ng.date) {
+      var wk = ng.week ? "（" + esc(ng.week) + "）" : "";
+      var tm = ng.time ? " " + esc(ng.time) : "";
+      return '<div class="cur-next"><span class="cn-label">次戦</span>' + esc(ng.date) + wk + tm +
+        ' ・ ' + esc(ng.round || "") + ' vs ' + esc(ng.opponent || "未定") + '</div>';
+    }
+    return '<div class="cur-next tbd"><span class="cn-label">次戦</span>対戦カード・日程は未定</div>';
+  }
+
+  function renderCurrent() {
+    var $sec = document.getElementById("currentSection");
+    if (!$sec) return;
+    var cur = computeCurrent();
+    if (!cur.curYear) { $sec.hidden = true; return; }
+    var alive = cur.alive.slice();
+    var outShown = cur.out.filter(function (e) { return e.wins >= 1; });  // 敗退は今大会1勝以上のみ
+    if (!alive.length && !outShown.length) { $sec.hidden = true; return; }
     $sec.hidden = false;
-    document.getElementById("currentTitle").textContent = curYear + "年 夏の地方大会（選手権）";
+    document.getElementById("currentTitle").textContent = cur.curYear + "年 夏の地方大会（選手権）";
 
-    // 勝ち残り：勝利数が多い順
     alive.sort(function (a, b) { return b.wins - a.wins || dateVal(b.last) - dateVal(a.last); });
-    // 敗退：最後の試合が新しい順
-    out.sort(function (a, b) { return dateVal(b.last) - dateVal(a.last); });
+    outShown.sort(function (a, b) { return b.wins - a.wins || dateVal(b.last) - dateVal(a.last); });
 
     document.getElementById("aliveCount").textContent = alive.length + "校";
-    document.getElementById("outCount").textContent = out.length + "校";
+    document.getElementById("outCount").textContent = outShown.length + "校（1勝以上）";
 
     function itemHtml(e, kind) {
       var g = e.last;
       var scoreHtml = '<span class="cur-score">' + esc(g.score_self) + '–' + esc(g.score_opp) + '</span>';
       var teamNote = (g.team_name && g.team_name.indexOf("・") !== -1) ? '（連合）' : '';
-      var detail;
+      var detail, badge, extra = "";
       if (kind === "alive") {
-        detail = '<span class="cd-round">' + esc(g.round) + '</span> 突破 ・ <span class="cd-opp">' + esc(g.opponent) + '</span> に勝利'
-          + (e.wins > 1 ? ' ・ 今大会 ' + e.wins + '勝' : '');
+        detail = '<span class="cd-round">' + esc(g.round) + '</span> 突破' + (e.wins > 0 ? ' ・ 今大会 ' + e.wins + '勝' : '') +
+          ' ・ 直近 <span class="cd-opp">' + esc(g.opponent) + '</span> に勝利';
+        badge = '<span class="cur-badge alive">勝ち残り</span>';
+        extra = nextGameHtml(e.s);
       } else {
-        detail = '<span class="cd-round">' + esc(g.round) + '</span> で敗退 ・ <span class="cd-opp">' + esc(g.opponent) + '</span> に敗れる'
-          + (e.wins > 0 ? '（今大会 ' + e.wins + '勝）' : '');
+        detail = '<span class="cd-round">' + esc(g.round) + '</span> で敗退 ・ <span class="cd-opp">' + esc(g.opponent) +
+          '</span> に敗れる（今大会 ' + e.wins + '勝）';
+        badge = '<span class="cur-badge out">敗退</span>';
       }
-      var badge = kind === "alive" ? '<span class="cur-badge alive">勝ち残り</span>' : '<span class="cur-badge out">敗退</span>';
       return '<div class="cur-item ' + kind + '" data-id="' + esc(e.s.id) + '">' +
         '<span class="cur-name">' + esc(e.s.name) + teamNote + '</span>' +
-        '<span class="cur-detail">' + detail + '</span>' + scoreHtml + badge +
+        '<span class="cur-detail">' + detail + '</span>' + scoreHtml + badge + extra +
       '</div>';
     }
 
-    var aHtml = alive.length ? alive.map(function (e) { return itemHtml(e, "alive"); }).join("")
+    document.getElementById("aliveList").innerHTML = alive.length
+      ? alive.map(function (e) { return itemHtml(e, "alive"); }).join("")
       : '<p class="current-empty">勝ち残っている高専はありません。</p>';
-    var oHtml = out.length ? out.map(function (e) { return itemHtml(e, "out"); }).join("")
-      : '<p class="current-empty">敗退した高専はまだありません。</p>';
-    document.getElementById("aliveList").innerHTML = aHtml;
-    document.getElementById("outList").innerHTML = oHtml;
+    document.getElementById("outList").innerHTML = outShown.length
+      ? outShown.map(function (e) { return itemHtml(e, "out"); }).join("")
+      : '<p class="current-empty">今大会1勝以上して敗退した高専はまだありません。</p>';
   }
-  // 開催中セクションのクリック→詳細モーダル
-  document.getElementById("currentSection").addEventListener("click", function (e) {
-    var it = e.target.closest(".cur-item"); if (!it) return;
-    var s = schools.find(function (x) { return x.id === it.getAttribute("data-id"); });
-    if (s) openModal(s);
-  });
+
+  // ---- 全国勝率・地方別 過去最高戦績 ----
+  function roundRank(r) {
+    r = r || "";
+    if (r.indexOf("優勝") >= 0) return 1000;
+    if (r.indexOf("準決勝") >= 0) return 800;
+    if (r.indexOf("準々決勝") >= 0) return 700;
+    if (r.indexOf("代表決定") >= 0) return 850;
+    if (r.indexOf("決勝") >= 0) return 900;
+    var early = /地区|ブロック|予選/.test(r);
+    var m = r.match(/(\d+)\s*回戦/);
+    var n = m ? parseInt(m[1], 10) : 0;
+    if (early) return 40 + n * 5;
+    if (n) return n * 100;
+    return 60;
+  }
+  function cmpRank(a, b) { for (var i = 0; i < a.length; i++) { if (a[i] !== b[i]) return a[i] - b[i]; } return 0; }
+  function achText(b) {
+    var r = b.round || "";
+    if (/優勝/.test(r) || (b.lastResult === "win" && /決勝/.test(r) && r.indexOf("準") < 0)) return "優勝・" + b.wins + "勝";
+    var label = r + (/回戦|決勝|代表決定/.test(r) ? "進出" : "");
+    if (b.lastResult === "win") label += "（勝利）";
+    return (label || "出場") + (b.wins > 0 ? "・" + b.wins + "勝" : "");
+  }
+
+  function renderRecords() {
+    var W = 0, L = 0;
+    schools.forEach(function (s) { W += s.wins; L += s.loses; });
+    var pct = (W + L) ? W / (W + L) : 0;
+    var pctStr = pct >= 1 ? "1.000" : "." + Math.round(pct * 1000).toString().padStart(3, "0");
+    document.getElementById("recWinrate").innerHTML =
+      '<div><div class="rw-label">全国の高専 通算勝率</div><div class="rw-big">' + pctStr + '</div></div>' +
+      '<div class="rw-sub">' + W.toLocaleString() + '勝 ' + L.toLocaleString() + '敗 ／ ' + (W + L).toLocaleString() + '試合</div>' +
+      '<div class="rw-note">※ バーチャル高校野球 収録分の集計</div>';
+
+    var best = {};
+    schools.forEach(function (s) {
+      var byY = {};
+      s.games.forEach(function (g) { if (g.season === "夏") { (byY[g.year] = byY[g.year] || []).push(g); } });
+      Object.keys(byY).forEach(function (y) {
+        var gs = byY[y].slice().sort(function (a, b) { return dateVal(a) - dateVal(b); });
+        var wins = gs.filter(function (g) { return g.result === "win"; }).length;
+        var last = gs[gs.length - 1];
+        var rank = [roundRank(last.round), wins, parseInt(y, 10) || 0];
+        var cand = { s: s, year: y, wins: wins, round: last.round, tournament: last.tournament, lastResult: last.result, rank: rank };
+        if (!best[s.region] || cmpRank(rank, best[s.region].rank) > 0) best[s.region] = cand;
+      });
+    });
+    document.getElementById("recRegionGrid").innerHTML = REGIONS.filter(function (r) { return best[r]; }).map(function (r) {
+      var b = best[r];
+      return '<div class="rec-card" data-r="' + esc(r) + '" data-id="' + esc(b.s.id) + '">' +
+        '<div class="rc-region">' + esc(r) + '</div>' +
+        '<div class="rc-school">' + esc(b.s.name) + '</div>' +
+        '<div class="rc-ach">' + esc(achText(b)) + '</div>' +
+        '<div class="rc-meta">' + esc(b.year) + '年 ' + esc(shortTour(b.tournament)) + '</div>' +
+      '</div>';
+    }).join("");
+  }
+
+  // 開催中セクション／記録カードのクリック→詳細モーダル
+  function bindOpenBy(id) {
+    document.getElementById(id).addEventListener("click", function (e) {
+      var it = e.target.closest("[data-id]"); if (!it) return;
+      var s = schools.find(function (x) { return x.id === it.getAttribute("data-id"); });
+      if (s) openModal(s);
+    });
+  }
+  bindOpenBy("currentSection");
+  bindOpenBy("recRegionGrid");
+
+  // ---- 勝ち残り校の次戦を日程JSON(JSONP)から取得 ----
+  var SCHED = "https://www.asahicom.jp/koshien/contents/virtualbaseball/site/chihou_game_day/";
+  async function fetchNextGame(s, lastGame) {
+    if (!s.slug) return null;
+    var after = dateVal(lastGame);
+    var dd = await jsonp(SCHED + "chihou_game_days_" + s.slug + ".json", 6000, "chihou_game_days").catch(function () { return null; });
+    if (!dd || !dd.result) return null;
+    var days = [];
+    (dd.result.info || []).forEach(function (info) {
+      var y = parseInt(info.year, 10), m = parseInt(info.month, 10);
+      (info.date || []).forEach(function (x) { days.push({ y: y, m: m, d: parseInt(x.day, 10), w: x.week }); });
+    });
+    days.sort(function (a, b) { return (a.m * 100 + a.d) - (b.m * 100 + b.d); });
+    var sids = {}; (s.source_ids || []).forEach(function (x) { sids[String(x)] = 1; });
+    for (var i = 0; i < days.length; i++) {
+      var day = days[i];
+      if (day.m * 100 + day.d <= after) continue;
+      var ymd = String(day.y) + String(day.m).padStart(2, "0") + String(day.d).padStart(2, "0");
+      var dj = await jsonp(SCHED + "chihou_game_day_" + ymd + "_" + s.slug + ".json", 6000, "chihou_game_day").catch(function () { return null; });
+      if (!dj || !dj.result) continue;
+      var found = null;
+      (dj.result.info || []).forEach(function (info) {
+        (info.game_list || []).forEach(function (g) {
+          if (found) return;
+          var s1 = String(g.school_id1), s2 = String(g.school_id2);
+          if ((sids[s1] || sids[s2]) && String(g.status_id) !== "3") {
+            found = { date: day.m + "/" + day.d, week: day.w, time: g.time, round: g.round_name, opponent: (sids[s1] ? g.school_name2 : g.school_name1) || "未定" };
+          }
+        });
+      });
+      if (found) return found;
+    }
+    return null;
+  }
+  async function fetchNextGames() {
+    var cur = computeCurrent();
+    for (var i = 0; i < cur.alive.length; i++) {
+      var e = cur.alive[i];
+      try {
+        var ng = await fetchNextGame(e.s, e.last);
+        if (ng) { e.s.next_game = ng; }
+      } catch (err) { /* ignore */ }
+    }
+    renderCurrent();
+  }
 
   // ---- init ----
   renderStats();
+  renderRecords();
   renderTabs();
   renderMap();
   renderCurrent();

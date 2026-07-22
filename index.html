@@ -36,6 +36,14 @@
 
 <section class="stats wrap" id="statsRow"></section>
 
+<section class="records wrap" id="recordsSection">
+  <div class="rec-winrate" id="recWinrate"></div>
+  <div class="rec-region">
+    <h3 class="rec-h">地方別・夏の大会 過去最高戦績</h3>
+    <div class="rec-region-grid" id="recRegionGrid"></div>
+  </div>
+</section>
+
 <section class="current wrap" id="currentSection" hidden>
   <div class="current-head">
     <h2 id="currentTitle">開催中の大会</h2>
@@ -59,7 +67,13 @@
     <div class="map-selected" id="mapSelected" hidden></div>
   </div>
   <div class="jpmap" id="jpMap"></div>
-  <p class="map-legend"><span class="lg-swatch has"></span>高専のある都道府県（クリックで絞り込み）　<span class="lg-swatch none"></span>高専なし</p>
+  <p class="map-legend">
+    <span class="lg-swatch alive"></span>勝ち残り
+    <span class="lg-swatch out"></span>敗退（開催中の大会）
+    <span class="lg-swatch has"></span>高専あり
+    <span class="lg-swatch none"></span>高専なし
+    <br>クリックでその都道府県の高専に絞り込み
+  </p>
 </section>
 
 <section class="controls wrap">

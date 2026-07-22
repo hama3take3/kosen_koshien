@@ -60,6 +60,31 @@ a{color:var(--dirt)}
 .stat-card .num small{font-size:15px;color:var(--muted);font-weight:700;margin-left:2px}
 .stat-card .lbl{font-size:12.5px;color:var(--muted);margin-top:4px}
 
+/* records (勝率・地方別最高戦績) */
+.records{padding:14px 20px 6px}
+.rec-winrate{display:flex;align-items:center;gap:16px;background:linear-gradient(120deg,#0d2440,#1c4a7a);color:#fff;border-radius:14px;padding:16px 22px;margin-bottom:16px;flex-wrap:wrap}
+.rec-winrate .rw-label{font-size:13px;color:#c3d3e6;font-weight:700}
+.rec-winrate .rw-big{font-size:34px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--gold);line-height:1}
+.rec-winrate .rw-sub{font-size:13px;color:#c3d3e6}
+.rec-winrate .rw-note{font-size:12px;color:#96abc4;margin-left:auto}
+.rec-h{font-size:15px;color:var(--navy);margin:0 0 10px;display:flex;align-items:center;gap:8px}
+.rec-h::before{content:"";width:4px;height:15px;background:var(--gold);border-radius:2px}
+.rec-region-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rec-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 14px;border-top:3px solid var(--grass)}
+.rec-card .rc-region{font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.03em}
+.rec-card .rc-school{font-size:15.5px;font-weight:800;color:var(--navy);margin:2px 0 3px}
+.rec-card .rc-ach{font-size:12.5px;color:var(--dirt);font-weight:800}
+.rec-card .rc-meta{font-size:11.5px;color:var(--muted);margin-top:2px}
+.rec-card[data-r="北海道"]{border-top-color:#2b6ca3}
+.rec-card[data-r="東北"]{border-top-color:#3a7d8c}
+.rec-card[data-r="関東"]{border-top-color:#4a5da0}
+.rec-card[data-r="甲信越・北陸"]{border-top-color:#7a5aa0}
+.rec-card[data-r="東海"]{border-top-color:#a05a7a}
+.rec-card[data-r="近畿"]{border-top-color:var(--dirt)}
+.rec-card[data-r="中国"]{border-top-color:#b5892b}
+.rec-card[data-r="四国"]{border-top-color:#2f8f7d}
+.rec-card[data-r="九州・沖縄"]{border-top-color:#c0563f}
+
 /* current tournament */
 .current{padding:22px 20px 6px}
 .current-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:14px}
@@ -85,6 +110,11 @@ a{color:var(--dirt)}
 .cur-badge.alive{background:var(--win)}
 .cur-badge.out{background:#b23b3b}
 .current-empty{font-size:12.5px;color:var(--muted);padding:8px 2px}
+.cur-next{flex-basis:100%;margin-top:2px;font-size:12px;color:#2f6d47;font-weight:700;background:#eef7f0;border-radius:7px;padding:5px 10px}
+.cur-next .cn-label{background:var(--win);color:#fff;font-size:10px;font-weight:800;padding:1px 7px;border-radius:5px;margin-right:8px}
+.cur-next.tbd{color:var(--muted);background:#f1f3f6}
+.cur-next.tbd .cn-label{background:#8892a0}
+.cur-item{flex-wrap:wrap}
 
 /* japan map */
 .mapwrap{padding:18px 20px 4px}
@@ -100,10 +130,18 @@ a{color:var(--dirt)}
 .pref-tile.has .pt-n{font-size:10px}
 .pref-tile.has .pt-c{position:absolute;top:1px;right:2px;font-size:8px;font-weight:800;color:var(--dirt);background:#fff;border-radius:99px;min-width:12px;height:12px;line-height:12px}
 .pref-tile.has:hover .pt-c{color:var(--grass)}
-.pref-tile.active{background:var(--dirt);border-color:var(--dirt);color:#fff;transform:scale(1.08);z-index:2;box-shadow:var(--shadow)}
-.pref-tile.active .pt-c{color:var(--dirt)}
-.map-legend{text-align:center;font-size:11.5px;color:var(--muted);margin:12px 0 0}
-.lg-swatch{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin:0 3px 0 10px}
+.pref-tile.active{outline:3px solid var(--navy);outline-offset:0;z-index:3;transform:scale(1.1)}
+/* 開催中の勝ち残り／敗退 の色分け */
+.pref-tile.alive-p{background:#e6b422;border-color:#c99e10;color:#4a3800;cursor:pointer}
+.pref-tile.alive-p:hover{background:#f0c53a;transform:scale(1.08);z-index:2;box-shadow:var(--shadow)}
+.pref-tile.alive-p .pt-c{color:#a5600f}
+.pref-tile.out-p{background:#e7c3c3;border-color:#d3a3a3;color:#8a3a3a;cursor:pointer}
+.pref-tile.out-p:hover{background:#c96a6a;color:#fff;transform:scale(1.08);z-index:2;box-shadow:var(--shadow)}
+.pref-tile.out-p .pt-c{color:#b23b3b}
+.map-legend{text-align:center;font-size:11.5px;color:var(--muted);margin:12px 0 0;line-height:1.9}
+.lg-swatch{display:inline-block;width:12px;height:12px;border-radius:3px;vertical-align:-2px;margin:0 3px 0 12px}
+.lg-swatch.alive{background:#e6b422;border:1px solid #c99e10}
+.lg-swatch.out{background:#e7c3c3;border:1px solid #d3a3a3}
 .lg-swatch.has{background:#dcebe1;border:1px solid #b6d8c1}
 .lg-swatch.none{background:#e9edf2;border:1px solid #dfe4ea}
 

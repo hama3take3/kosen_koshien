@@ -34,6 +34,7 @@
    "total_games": 34,
    "wins": 5,
    "loses": 29,
+   "next_game": null,
    "games": [
     {
      "game_id": "265405",
@@ -500,6 +501,7 @@
    "total_games": 28,
    "wins": 2,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "265331",
@@ -886,6 +888,7 @@
    "total_games": 35,
    "wins": 9,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "265264",
@@ -1363,6 +1366,7 @@
    "total_games": 31,
    "wins": 5,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "265288",
@@ -1799,6 +1803,7 @@
    "total_games": 37,
    "wins": 8,
    "loses": 29,
+   "next_game": null,
    "games": [
     {
      "game_id": "266109",
@@ -2305,6 +2310,7 @@
    "total_games": 29,
    "wins": 4,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "266861",
@@ -2704,6 +2710,7 @@
    "total_games": 32,
    "wins": 5,
    "loses": 27,
+   "next_game": null,
    "games": [
     {
      "game_id": "266555",
@@ -3142,6 +3149,7 @@
    "total_games": 34,
    "wins": 9,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "266829",
@@ -3607,6 +3615,7 @@
    "total_games": 42,
    "wins": 17,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "267478",
@@ -4176,6 +4185,7 @@
    "total_games": 16,
    "wins": 4,
    "loses": 12,
+   "next_game": null,
    "games": [
     {
      "game_id": "126043",
@@ -4409,6 +4419,7 @@
    "total_games": 25,
    "wins": 2,
    "loses": 23,
+   "next_game": null,
    "games": [
     {
      "game_id": "266238",
@@ -4767,6 +4778,7 @@
    "total_games": 35,
    "wins": 7,
    "loses": 28,
+   "next_game": null,
    "games": [
     {
      "game_id": "265594",
@@ -5247,6 +5259,7 @@
    "total_games": 33,
    "wins": 7,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "267016",
@@ -5698,6 +5711,7 @@
    "total_games": 35,
    "wins": 10,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "267393",
@@ -6178,6 +6192,7 @@
    "total_games": 32,
    "wins": 5,
    "loses": 27,
+   "next_game": null,
    "games": [
     {
      "game_id": "267461",
@@ -6623,6 +6638,7 @@
    "total_games": 27,
    "wins": 2,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "266351",
@@ -7003,6 +7019,7 @@
    "total_games": 34,
    "wins": 4,
    "loses": 30,
+   "next_game": null,
    "games": [
     {
      "game_id": "266876",
@@ -7467,6 +7484,7 @@
    "total_games": 39,
    "wins": 14,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "267162",
@@ -8006,6 +8024,7 @@
    "total_games": 35,
    "wins": 5,
    "loses": 30,
+   "next_game": null,
    "games": [
     {
      "game_id": "265995",
@@ -8487,6 +8506,7 @@
    "total_games": 20,
    "wins": 3,
    "loses": 17,
+   "next_game": null,
    "games": [
     {
      "game_id": "194744",
@@ -8778,6 +8798,7 @@
    "total_games": 21,
    "wins": 2,
    "loses": 19,
+   "next_game": null,
    "games": [
     {
      "game_id": "191414",
@@ -9075,6 +9096,7 @@
    "total_games": 25,
    "wins": 7,
    "loses": 18,
+   "next_game": null,
    "games": [
     {
      "game_id": "268157",
@@ -9422,6 +9444,7 @@
    "total_games": 40,
    "wins": 15,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "266114",
@@ -9965,6 +9988,7 @@
    "total_games": 18,
    "wins": 0,
    "loses": 18,
+   "next_game": null,
    "games": [
     {
      "game_id": "164311",
@@ -10221,6 +10245,7 @@
    "total_games": 34,
    "wins": 8,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "266732",
@@ -10685,6 +10710,7 @@
    "total_games": 27,
    "wins": 3,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "265719",
@@ -11058,6 +11084,7 @@
    "total_games": 30,
    "wins": 6,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "265494",
@@ -11470,6 +11497,7 @@
    "total_games": 34,
    "wins": 11,
    "loses": 23,
+   "next_game": null,
    "games": [
     {
      "game_id": "268529",
@@ -11934,6 +11962,13 @@
    "total_games": 60,
    "wins": 39,
    "loses": 21,
+   "next_game": {
+    "date": "7/23",
+    "week": "木",
+    "time": "9:00",
+    "round": "準々決勝",
+    "opponent": "津田学園"
+   },
    "games": [
     {
      "game_id": "268574",
@@ -12736,6 +12771,7 @@
    "total_games": 8,
    "wins": 1,
    "loses": 7,
+   "next_game": null,
    "games": [
     {
      "game_id": "101942",
@@ -12862,6 +12898,7 @@
    "total_games": 26,
    "wins": 2,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "266414",
@@ -13230,6 +13267,7 @@
    "total_games": 32,
    "wins": 1,
    "loses": 31,
+   "next_game": null,
    "games": [
     {
      "game_id": "267642",
@@ -13668,6 +13706,7 @@
    "total_games": 37,
    "wins": 13,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "267562",
@@ -14171,6 +14210,7 @@
    "total_games": 33,
    "wins": 10,
    "loses": 23,
+   "next_game": null,
    "games": [
     {
      "game_id": "266724",
@@ -14622,6 +14662,7 @@
    "total_games": 32,
    "wins": 8,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "268454",
@@ -15060,6 +15101,7 @@
    "total_games": 35,
    "wins": 11,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "267491",
@@ -15537,6 +15579,7 @@
    "total_games": 30,
    "wins": 4,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "268303",
@@ -15949,6 +15992,7 @@
    "total_games": 30,
    "wins": 4,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "267420",
@@ -16361,6 +16405,7 @@
    "total_games": 31,
    "wins": 7,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "267357",
@@ -16786,6 +16831,7 @@
    "total_games": 29,
    "wins": 5,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "265599",
@@ -17185,6 +17231,7 @@
    "total_games": 30,
    "wins": 6,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "265818",
@@ -17597,6 +17644,7 @@
    "total_games": 33,
    "wins": 8,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "268254",
@@ -18048,6 +18096,7 @@
    "total_games": 37,
    "wins": 13,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "267055",
@@ -18554,6 +18603,7 @@
    "total_games": 32,
    "wins": 5,
    "loses": 27,
+   "next_game": null,
    "games": [
     {
      "game_id": "267076",
@@ -18995,6 +19045,7 @@
    "total_games": 37,
    "wins": 10,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "268122",
@@ -19500,6 +19551,7 @@
    "total_games": 22,
    "wins": 0,
    "loses": 22,
+   "next_game": null,
    "games": [
     {
      "game_id": "229428",
@@ -19809,6 +19861,7 @@
    "total_games": 42,
    "wins": 18,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "266202",
@@ -20380,6 +20433,7 @@
    "total_games": 32,
    "wins": 6,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "266472",
@@ -20818,6 +20872,7 @@
    "total_games": 27,
    "wins": 4,
    "loses": 23,
+   "next_game": null,
    "games": [
     {
      "game_id": "254092",
@@ -21194,6 +21249,7 @@
    "total_games": 36,
    "wins": 8,
    "loses": 28,
+   "next_game": null,
    "games": [
     {
      "game_id": "268198",
@@ -21686,6 +21742,7 @@
    "total_games": 25,
    "wins": 1,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "266091",
@@ -22033,6 +22090,7 @@
    "total_games": 31,
    "wins": 7,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "265785",
@@ -22466,6 +22524,7 @@
    "total_games": 35,
    "wins": 8,
    "loses": 27,
+   "next_game": null,
    "games": [
     {
      "game_id": "266129",
@@ -22946,6 +23005,7 @@
    "total_games": 35,
    "wins": 10,
    "loses": 25,
+   "next_game": null,
    "games": [
     {
      "game_id": "266101",
@@ -23427,6 +23487,7 @@
    "total_games": 32,
    "wins": 8,
    "loses": 24,
+   "next_game": null,
    "games": [
     {
      "game_id": "265879",
@@ -23880,6 +23941,7 @@
    "total_games": 43,
    "wins": 10,
    "loses": 32,
+   "next_game": null,
    "games": [
     {
      "game_id": "266236",
@@ -24461,6 +24523,7 @@
    "total_games": 35,
    "wins": 9,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "266323",
@@ -24944,6 +25007,7 @@
    "total_games": 33,
    "wins": 4,
    "loses": 29,
+   "next_game": null,
    "games": [
     {
      "game_id": "266245",
@@ -25395,6 +25459,7 @@
    "total_games": 36,
    "wins": 9,
    "loses": 26,
+   "next_game": null,
    "games": [
     {
      "game_id": "266270",
@@ -25891,6 +25956,7 @@
    "total_games": 33,
    "wins": 6,
    "loses": 27,
+   "next_game": null,
    "games": [
     {
      "game_id": "265205",

@@ -252,11 +252,90 @@ def discover_summer_tids(slug):
         return []
     # 4年以上開催されている tournament_id を対象（夏の選手権＋長期開催の地区大会）
     good = [(t, ys) for t, ys in tid_years.items() if len(ys) >= 4]
-    if not good:
+    if not good and tid_years:
         # フォールバック: 最多年数の1つ
         t = max(tid_years.items(), key=lambda kv: len(kv[1]))[0]
         good = [(t, tid_years[t])]
-    return good
+    cf = CACHE / f"tids_{slug}.json"
+    if good:
+        # 成功時はディスクにキャッシュ（都道府県ページ取得失敗に備える）
+        try:
+            cf.write_text(json.dumps({t: sorted(ys) for t, ys in good}), encoding="utf-8")
+        except Exception:
+            pass
+        return good
+    # 取得失敗時は前回のキャッシュにフォールバック（過去大会データの取りこぼし防止）
+    if cf.exists():
+        try:
+            d = json.loads(cf.read_text(encoding="utf-8"))
+            return [(t, set(ys)) for t, ys in d.items()]
+        except Exception:
+            pass
+    return []
+
+
+# ---------------------------------------------------------------------------
+# 開催中大会の「次の試合予定」を日程JSON(JSONP)から取得
+# ---------------------------------------------------------------------------
+SCHED_BASE = "https://www.asahicom.jp/koshien/contents/virtualbaseball/site/chihou_game_day/"
+
+
+def _fetch_jsonp(url):
+    txt = fetch_text(url)
+    if not txt:
+        return None
+    i, j = txt.find("("), txt.rfind(")")
+    if i == -1 or j == -1:
+        return None
+    try:
+        return json.loads(txt[i + 1:j])
+    except Exception:
+        return None
+
+
+def schedule_days(slug):
+    d = _fetch_jsonp(SCHED_BASE + f"chihou_game_days_{slug}.json")
+    days = []
+    if d and d.get("result"):
+        for info in d["result"].get("info", []):
+            try:
+                y, m = int(info["year"]), int(info["month"])
+            except Exception:
+                continue
+            for dd in info.get("date", []):
+                try:
+                    days.append((y, m, int(dd["day"]), dd.get("week", "")))
+                except Exception:
+                    pass
+    return days
+
+
+def day_games(slug, y, m, d):
+    ymd = f"{y:04d}{m:02d}{d:02d}"
+    dj = _fetch_jsonp(SCHED_BASE + f"chihou_game_day_{ymd}_{slug}.json")
+    games = []
+    if dj and dj.get("result"):
+        for info in dj["result"].get("info", []):
+            games.extend(info.get("game_list", []))
+    return games
+
+
+def next_game_for(slug, source_ids, after_md):
+    """勝ち残り校の次戦（未終了の予定試合）を、最終試合日より後の日程から探す。"""
+    sids = set(str(x) for x in source_ids)
+    for (y, m, d, week) in sorted(schedule_days(slug)):
+        if (m, d) <= after_md:
+            continue
+        for g in day_games(slug, y, m, d):
+            s1, s2 = str(g.get("school_id1")), str(g.get("school_id2"))
+            if s1 not in sids and s2 not in sids:
+                continue
+            if str(g.get("status_id")) == "3":
+                continue  # 既に終了
+            opp = g.get("school_name2", "") if s1 in sids else g.get("school_name1", "")
+            return {"date": f"{m}/{d}", "week": week, "time": g.get("time", ""),
+                    "round": g.get("round_name", ""), "opponent": opp or "未定"}
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -411,7 +490,30 @@ def main():
                 if added:
                     print(f"    {slug} {year} tid{tid}: +{added} 高専試合")
 
-    print("[4/4] 集計・出力 ...")
+    print("[4/5] 開催中の大会・勝ち残り校の次戦を取得 ...")
+    cur_year = max((g["year"] for A in agg.values() for g in A["games"] if g["season"] == "夏"), default="")
+    for e in CANONICAL:
+        A = agg[e[0]]
+        natsu = [g for g in A["games"] if g["season"] == "夏" and g["year"] == cur_year]
+        if not natsu:
+            continue
+        def _md(g):
+            try:
+                m, d = [int(x) for x in g["date"].split("/")]
+                return (m, d)
+            except Exception:
+                return (0, 0)
+        natsu.sort(key=_md)
+        last = natsu[-1]
+        if last["result"] == "lose":
+            continue  # 敗退済み
+        slug = CANON_SLUG.get(e[0], "")
+        ng = next_game_for(slug, A["source_ids"], _md(last)) if slug else None
+        if ng:
+            A["next_game"] = ng
+            print(f"    {A['name']}: 次戦 {ng['date']}({ng['week']}) {ng['time']} vs {ng['opponent']}（{ng['round']}）")
+
+    print("[5/5] 集計・出力 ...")
     out = {"generated": time.strftime("%Y-%m-%d"), "source": "バーチャル高校野球 (vk.sportsbull.jp)", "schools": []}
     for e in CANONICAL:
         A = agg[e[0]]
@@ -445,6 +547,7 @@ def main():
             "total_games": len(games),
             "wins": wins,
             "loses": loses,
+            "next_game": A.get("next_game"),
             "games": games,
         })
 
