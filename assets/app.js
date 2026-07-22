@@ -383,7 +383,9 @@
     if (!/^https?:$/.test(location.protocol)) {
       // file:// では外部スクリプト取得が不安定なため案内のみ
     }
-    var API = "https://api.base.asahi.com/?command=school_record&school_id=";
+    // callback=jsonpcall を付けると JSONP形式 jsonpcall({...}) で返る（無いと素のJSONで、
+    // <script>読み込みではコールバックが発火せず取得できない）
+    var API = "https://api.base.asahi.com/?command=school_record&callback=jsonpcall&school_id=";
     setLive("loading", '<span class="ls-dot"></span> 最新の試合結果を取得中…');
     var totalNew = 0, totalUpd = 0, anyOk = false, firstTried = false;
 
@@ -395,10 +397,14 @@
         var id = ids[j];
         var data = null;
         try {
-          data = await jsonp(API + encodeURIComponent(id), 7000);
+          data = await jsonp(API + encodeURIComponent(id), 6000);
           anyOk = true;
         } catch (e) {
-          if (!firstTried && !anyOk) { $live.hidden = true; return; } // CSP/オフライン等：スナップショット表示のまま
+          if (!firstTried && !anyOk) {
+            // 最初の取得に失敗＝この環境では外部取得不可（claude.aiのArtifact等のCSP、オフライン）
+            setLive("info", "ⓘ この環境では最新結果の自動取得はできません。表示は保存時点（" + (DATA.generated || "") + "）のデータです。");
+            return;
+          }
         }
         firstTried = true;
         if (data && data.result) {
