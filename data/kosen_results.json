@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-05",
+ "generated": "2026-07-22",
  "source": "バーチャル高校野球 (vk.sportsbull.jp)",
  "schools": [
   {
@@ -8,6 +8,21 @@
    "kana": "くしろ",
    "prefecture": "北海道",
    "region": "北海道",
+   "slug": "nhokkaido",
+   "source_ids": [
+    "1292",
+    "1493",
+    "1505",
+    "1508",
+    "1519",
+    "1521"
+   ],
+   "live_ids": [
+    "1292",
+    "1508",
+    "1519",
+    "1521"
+   ],
    "team_names": [
     "厚岸翔洋・霧多布・羅臼・釧路高専",
     "標茶・厚岸翔洋・釧路高専",
@@ -483,6 +498,14 @@
    "kana": "あさひかわ",
    "prefecture": "北海道",
    "region": "北海道",
+   "slug": "nhokkaido",
+   "source_ids": [
+    "1312",
+    "1506"
+   ],
+   "live_ids": [
+    "1312"
+   ],
    "team_names": [
     "富良野緑峰・上富良野・旭川高専",
     "旭川高専"
@@ -863,6 +886,13 @@
    "kana": "はこだて",
    "prefecture": "北海道",
    "region": "北海道",
+   "slug": "shokkaido",
+   "source_ids": [
+    "2018"
+   ],
+   "live_ids": [
+    "2018"
+   ],
    "team_names": [
     "函館高専"
    ],
@@ -1333,6 +1363,13 @@
    "kana": "とまこまい",
    "prefecture": "北海道",
    "region": "北海道",
+   "slug": "shokkaido",
+   "source_ids": [
+    "2073"
+   ],
+   "live_ids": [
+    "2073"
+   ],
    "team_names": [
     "苫小牧高専"
    ],
@@ -1764,6 +1801,20 @@
    "kana": "はちのへ",
    "prefecture": "青森県",
    "region": "東北",
+   "slug": "aomori",
+   "source_ids": [
+    "3048",
+    "3114",
+    "3116",
+    "3119",
+    "3122"
+   ],
+   "live_ids": [
+    "3048",
+    "3116",
+    "3119",
+    "3122"
+   ],
    "team_names": [
     "八戸高専",
     "八戸高専・七戸・六ケ所・八戸商・百石・野辺地",
@@ -2290,6 +2341,14 @@
    "kana": "いちのせき",
    "prefecture": "岩手県",
    "region": "東北",
+   "slug": "iwate",
+   "source_ids": [
+    "4008",
+    "4188"
+   ],
+   "live_ids": [
+    "4008"
+   ],
    "team_names": [
     "一関高専",
     "一関高専・前沢・岩谷堂"
@@ -2735,6 +2794,13 @@
    "kana": "あきた",
    "prefecture": "秋田県",
    "region": "東北",
+   "slug": "akita",
+   "source_ids": [
+    "5007"
+   ],
+   "live_ids": [
+    "5007"
+   ],
    "team_names": [
     "秋田高専"
    ],
@@ -3179,6 +3245,13 @@
    "kana": "つるおか",
    "prefecture": "山形県",
    "region": "東北",
+   "slug": "yamagata",
+   "source_ids": [
+    "6055"
+   ],
+   "live_ids": [
+    "6055"
+   ],
    "team_names": [
     "鶴岡高専"
    ],
@@ -3649,6 +3722,13 @@
    "kana": "せんだいなとり",
    "prefecture": "宮城県",
    "region": "東北",
+   "slug": "miyagi",
+   "source_ids": [
+    "7067"
+   ],
+   "live_ids": [
+    "7067"
+   ],
    "team_names": [
     "仙台電波高専",
     "仙台高専名取"
@@ -4276,6 +4356,13 @@
    "kana": "せんだいひろせ",
    "prefecture": "宮城県",
    "region": "東北",
+   "slug": "miyagi",
+   "source_ids": [
+    "7076"
+   ],
+   "live_ids": [
+    "7076"
+   ],
    "team_names": [
     "仙台高専広瀬",
     "宮城高専"
@@ -4526,6 +4613,15 @@
    "kana": "ふくしま",
    "prefecture": "福島県",
    "region": "東北",
+   "slug": "fukushima",
+   "source_ids": [
+    "8073",
+    "8150"
+   ],
+   "live_ids": [
+    "8073",
+    "8150"
+   ],
    "team_names": [
     "いわき総合・小名浜海星・平商・福島高専",
     "福島高専"
@@ -4854,6 +4950,20 @@
    "kana": "いばらき",
    "prefecture": "茨城県",
    "region": "関東",
+   "slug": "ibaraki",
+   "source_ids": [
+    "9010",
+    "9172",
+    "9234",
+    "9237",
+    "9245"
+   ],
+   "live_ids": [
+    "9010",
+    "9234",
+    "9237",
+    "9245"
+   ],
    "team_names": [
     "東海・茨城高専",
     "茨城高専",
@@ -5341,6 +5451,15 @@
    "kana": "おやま",
    "prefecture": "栃木県",
    "region": "関東",
+   "slug": "tochigi",
+   "source_ids": [
+    "10026",
+    "10130"
+   ],
+   "live_ids": [
+    "10026",
+    "10130"
+   ],
    "team_names": [
     "壬生・小山高専・栃木農・足利南",
     "小山高専"
@@ -5799,6 +5918,13 @@
    "kana": "ぐんま",
    "prefecture": "群馬県",
    "region": "関東",
+   "slug": "gunma",
+   "source_ids": [
+    "11019"
+   ],
+   "live_ids": [
+    "11019"
+   ],
    "team_names": [
     "群馬高専"
    ],
@@ -6295,6 +6421,15 @@
    "kana": "きさらづ",
    "prefecture": "千葉県",
    "region": "関東",
+   "slug": "chiba",
+   "source_ids": [
+    "13044",
+    "13323"
+   ],
+   "live_ids": [
+    "13044",
+    "13323"
+   ],
    "team_names": [
     "天羽・木更津高専・君津青葉",
     "木更津高専"
@@ -6727,6 +6862,16 @@
    "kana": "さんぎょうぎじゅつ",
    "prefecture": "東京都",
    "region": "関東",
+   "slug": "etokyo",
+   "source_ids": [
+    "14179",
+    "14219",
+    "14224",
+    "14227"
+   ],
+   "live_ids": [
+    "14179"
+   ],
    "team_names": [
     "大山・産業技術高専・東京学園",
     "大山・産業技術高専・東京学園・六郷工科",
@@ -7110,6 +7255,16 @@
    "kana": "とうきょう",
    "prefecture": "東京都",
    "region": "関東",
+   "slug": "wtokyo",
+   "source_ids": [
+    "15009",
+    "15161",
+    "15164",
+    "15165"
+   ],
+   "live_ids": [
+    "15009"
+   ],
    "team_names": [
     "八王子桑志・東京高専・桐ケ丘",
     "千早・東京高専・八王子桑志",
@@ -7610,6 +7765,13 @@
    "kana": "ながおか",
    "prefecture": "新潟県",
    "region": "甲信越・北陸",
+   "slug": "niigata",
+   "source_ids": [
+    "17063"
+   ],
+   "live_ids": [
+    "17063"
+   ],
    "team_names": [
     "長岡高専"
    ],
@@ -8184,6 +8346,19 @@
    "kana": "ながの",
    "prefecture": "長野県",
    "region": "甲信越・北陸",
+   "slug": "nagano",
+   "source_ids": [
+    "18069",
+    "18139",
+    "18171",
+    "18186",
+    "18190"
+   ],
+   "live_ids": [
+    "18069",
+    "18171",
+    "18190"
+   ],
    "team_names": [
     "下高井農林・須坂東・北部・長野高専",
     "坂城・長野高専・蓼科・軽井沢・小海",
@@ -8658,6 +8833,15 @@
    "kana": "とやまほんごう",
    "prefecture": "富山県",
    "region": "甲信越・北陸",
+   "slug": "toyama",
+   "source_ids": [
+    "24021",
+    "24074",
+    "24081"
+   ],
+   "live_ids": [
+    "24021"
+   ],
    "team_names": [
     "富山西・上市・高専本郷",
     "富山高専本郷",
@@ -8948,6 +9132,17 @@
    "kana": "とやまいみず",
    "prefecture": "富山県",
    "region": "甲信越・北陸",
+   "slug": "toyama",
+   "source_ids": [
+    "24036",
+    "24069",
+    "24071",
+    "24073",
+    "24075"
+   ],
+   "live_ids": [
+    "24036"
+   ],
    "team_names": [
     "上市・高専射水・高岡西",
     "富山商船高専",
@@ -9267,6 +9462,14 @@
    "kana": "とやま",
    "prefecture": "富山県",
    "region": "甲信越・北陸",
+   "slug": "toyama",
+   "source_ids": [
+    "24083",
+    "24085"
+   ],
+   "live_ids": [
+    "24083"
+   ],
    "team_names": [
     "伏木・呉羽・富山高専",
     "富山高専"
@@ -9621,6 +9824,13 @@
    "kana": "いしかわ",
    "prefecture": "石川県",
    "region": "甲信越・北陸",
+   "slug": "ishikawa",
+   "source_ids": [
+    "25030"
+   ],
+   "live_ids": [
+    "25030"
+   ],
    "team_names": [
     "石川高専"
    ],
@@ -10182,6 +10392,13 @@
    "kana": "こくさい",
    "prefecture": "石川県",
    "region": "甲信越・北陸",
+   "slug": "ishikawa",
+   "source_ids": [
+    "25014"
+   ],
+   "live_ids": [
+    "25014"
+   ],
    "team_names": [
     "国際高専",
     "金沢高専"
@@ -10445,6 +10662,13 @@
    "kana": "ふくい",
    "prefecture": "福井県",
    "region": "甲信越・北陸",
+   "slug": "fukui",
+   "source_ids": [
+    "26017"
+   ],
+   "live_ids": [
+    "26017"
+   ],
    "team_names": [
     "福井高専"
    ],
@@ -10902,6 +11126,13 @@
    "kana": "ぬまづ",
    "prefecture": "静岡県",
    "region": "東海",
+   "slug": "shizuoka",
+   "source_ids": [
+    "20066"
+   ],
+   "live_ids": [
+    "20066"
+   ],
    "team_names": [
     "沼津高専"
    ],
@@ -11281,6 +11512,13 @@
    "kana": "とよた",
    "prefecture": "愛知県",
    "region": "東海",
+   "slug": "aichi",
+   "source_ids": [
+    "21110"
+   ],
+   "live_ids": [
+    "21110"
+   ],
    "team_names": [
     "豊田高専"
    ],
@@ -11699,6 +11937,13 @@
    "kana": "ぎふ",
    "prefecture": "岐阜県",
    "region": "東海",
+   "slug": "gifu",
+   "source_ids": [
+    "22012"
+   ],
+   "live_ids": [
+    "22012"
+   ],
    "team_names": [
     "岐阜高専"
    ],
@@ -12195,6 +12440,13 @@
    "kana": "きんだい",
    "prefecture": "三重県",
    "region": "東海",
+   "slug": "mie",
+   "source_ids": [
+    "23064"
+   ],
+   "live_ids": [
+    "23064"
+   ],
    "team_names": [
     "近大高専"
    ],
@@ -13029,6 +13281,13 @@
    "kana": "とばしょうせん",
    "prefecture": "三重県",
    "region": "東海",
+   "slug": "mie",
+   "source_ids": [
+    "23050"
+   ],
+   "live_ids": [
+    "23050"
+   ],
    "team_names": [
     "鳥羽商船高専"
    ],
@@ -13174,6 +13433,13 @@
    "kana": "まいづる",
    "prefecture": "京都府",
    "region": "近畿",
+   "slug": "kyoto",
+   "source_ids": [
+    "28008"
+   ],
+   "live_ids": [
+    "28008"
+   ],
    "team_names": [
     "舞鶴高専"
    ],
@@ -13592,6 +13858,16 @@
    "kana": "おおさかこうだい",
    "prefecture": "大阪府",
    "region": "近畿",
+   "slug": "osaka",
+   "source_ids": [
+    "29105",
+    "29321",
+    "29354"
+   ],
+   "live_ids": [
+    "29321",
+    "29354"
+   ],
    "team_names": [
     "大阪公大高専",
     "大阪府大高専",
@@ -14093,6 +14369,13 @@
    "kana": "こうべ",
    "prefecture": "兵庫県",
    "region": "近畿",
+   "slug": "hyogo",
+   "source_ids": [
+    "30135"
+   ],
+   "live_ids": [
+    "30135"
+   ],
    "team_names": [
     "神戸高専"
    ],
@@ -14641,6 +14924,13 @@
    "kana": "あかし",
    "prefecture": "兵庫県",
    "region": "近畿",
+   "slug": "hyogo",
+   "source_ids": [
+    "30140"
+   ],
+   "live_ids": [
+    "30140"
+   ],
    "team_names": [
     "明石高専"
    ],
@@ -15085,6 +15375,13 @@
    "kana": "なら",
    "prefecture": "奈良県",
    "region": "近畿",
+   "slug": "nara",
+   "source_ids": [
+    "31019"
+   ],
+   "live_ids": [
+    "31019"
+   ],
    "team_names": [
     "奈良高専"
    ],
@@ -15529,6 +15826,13 @@
    "kana": "わかやま",
    "prefecture": "和歌山県",
    "region": "近畿",
+   "slug": "wakayama",
+   "source_ids": [
+    "32025"
+   ],
+   "live_ids": [
+    "32025"
+   ],
    "team_names": [
     "和歌山高専"
    ],
@@ -16012,6 +16316,13 @@
    "kana": "よなご",
    "prefecture": "鳥取県",
    "region": "中国",
+   "slug": "tottori",
+   "source_ids": [
+    "35023"
+   ],
+   "live_ids": [
+    "35023"
+   ],
    "team_names": [
     "米子高専"
    ],
@@ -16417,6 +16728,13 @@
    "kana": "まつえ",
    "prefecture": "島根県",
    "region": "中国",
+   "slug": "shimane",
+   "source_ids": [
+    "36038"
+   ],
+   "live_ids": [
+    "36038"
+   ],
    "team_names": [
     "松江高専"
    ],
@@ -16887,6 +17205,13 @@
    "kana": "つやま",
    "prefecture": "岡山県",
    "region": "中国",
+   "slug": "okayama",
+   "source_ids": [
+    "33046"
+   ],
+   "live_ids": [
+    "33046"
+   ],
    "team_names": [
     "津山高専"
    ],
@@ -17305,6 +17630,13 @@
    "kana": "くれ",
    "prefecture": "広島県",
    "region": "中国",
+   "slug": "hiroshima",
+   "source_ids": [
+    "34050"
+   ],
+   "live_ids": [
+    "34050"
+   ],
    "team_names": [
     "呉高専"
    ],
@@ -17710,6 +18042,13 @@
    "kana": "ひろしましょうせん",
    "prefecture": "広島県",
    "region": "中国",
+   "slug": "hiroshima",
+   "source_ids": [
+    "34096"
+   ],
+   "live_ids": [
+    "34096"
+   ],
    "team_names": [
     "広島商船高専"
    ],
@@ -18115,6 +18454,13 @@
    "kana": "とくやま",
    "prefecture": "山口県",
    "region": "中国",
+   "slug": "yamaguchi",
+   "source_ids": [
+    "37019"
+   ],
+   "live_ids": [
+    "37019"
+   ],
    "team_names": [
     "徳山高専"
    ],
@@ -18572,6 +18918,13 @@
    "kana": "うべ",
    "prefecture": "山口県",
    "region": "中国",
+   "slug": "yamaguchi",
+   "source_ids": [
+    "37034"
+   ],
+   "live_ids": [
+    "37034"
+   ],
    "team_names": [
     "宇部高専"
    ],
@@ -19094,6 +19447,15 @@
    "kana": "おおしましょうせん",
    "prefecture": "山口県",
    "region": "中国",
+   "slug": "yamaguchi",
+   "source_ids": [
+    "37059",
+    "37098"
+   ],
+   "live_ids": [
+    "37059",
+    "37098"
+   ],
    "team_names": [
     "大島商船高専",
     "高森・大島商船高専・岩国総合"
@@ -19565,6 +19927,15 @@
    "kana": "あなん",
    "prefecture": "徳島県",
    "region": "四国",
+   "slug": "tokushima",
+   "source_ids": [
+    "39016",
+    "39064"
+   ],
+   "live_ids": [
+    "39016",
+    "39064"
+   ],
    "team_names": [
     "阿南高専",
     "阿南高専・脇町"
@@ -20075,6 +20446,14 @@
    "kana": "かがわたくま",
    "prefecture": "香川県",
    "region": "四国",
+   "slug": "kagawa",
+   "source_ids": [
+    "38028",
+    "38048"
+   ],
+   "live_ids": [
+    "38028"
+   ],
    "team_names": [
     "笠田・香川高専詫間",
     "香川高専詫間"
@@ -20390,6 +20769,13 @@
    "kana": "かがわたかまつ",
    "prefecture": "香川県",
    "region": "四国",
+   "slug": "kagawa",
+   "source_ids": [
+    "38016"
+   ],
+   "live_ids": [
+    "38016"
+   ],
    "team_names": [
     "香川高専高松",
     "高松高専"
@@ -20991,6 +21377,15 @@
    "kana": "にいはま",
    "prefecture": "愛媛県",
    "region": "四国",
+   "slug": "ehime",
+   "source_ids": [
+    "40009",
+    "40119"
+   ],
+   "live_ids": [
+    "40009",
+    "40119"
+   ],
    "team_names": [
     "土居・西条農・新居浜高専",
     "新居浜高専"
@@ -21449,6 +21844,13 @@
    "kana": "ゆげしょうせん",
    "prefecture": "愛媛県",
    "region": "四国",
+   "slug": "ehime",
+   "source_ids": [
+    "40021"
+   ],
+   "live_ids": [
+    "40021"
+   ],
    "team_names": [
     "弓削商船高専"
    ],
@@ -21880,6 +22282,15 @@
    "kana": "こうち",
    "prefecture": "高知県",
    "region": "四国",
+   "slug": "kochi",
+   "source_ids": [
+    "41004",
+    "41058",
+    "41059"
+   ],
+   "live_ids": [
+    "41004"
+   ],
    "team_names": [
     "室戸・高知高専",
     "高知高専"
@@ -22351,6 +22762,14 @@
    "kana": "きたきゅうしゅう",
    "prefecture": "福岡県",
    "region": "九州・沖縄",
+   "slug": "fukuoka",
+   "source_ids": [
+    "42089",
+    "42201"
+   ],
+   "live_ids": [
+    "42089"
+   ],
    "team_names": [
     "北九州高専",
     "北九州高専・遠賀・築上西"
@@ -22705,6 +23124,13 @@
    "kana": "ありあけ",
    "prefecture": "福岡県",
    "region": "九州・沖縄",
+   "slug": "fukuoka",
+   "source_ids": [
+    "42065"
+   ],
+   "live_ids": [
+    "42065"
+   ],
    "team_names": [
     "有明高専"
    ],
@@ -23175,6 +23601,18 @@
    "kana": "くるめ",
    "prefecture": "福岡県",
    "region": "九州・沖縄",
+   "slug": "fukuoka",
+   "source_ids": [
+    "42158",
+    "42181",
+    "42194",
+    "42202"
+   ],
+   "live_ids": [
+    "42158",
+    "42194",
+    "42202"
+   ],
    "team_names": [
     "久留米高専",
     "久留米高専・久留米筑水",
@@ -23648,6 +24086,15 @@
    "kana": "させぼ",
    "prefecture": "長崎県",
    "region": "九州・沖縄",
+   "slug": "nagasaki",
+   "source_ids": [
+    "44026",
+    "44102"
+   ],
+   "live_ids": [
+    "44026",
+    "44102"
+   ],
    "team_names": [
     "佐世保高専",
     "西海学園・佐世保高専・佐世保商・佐世保西"
@@ -24132,6 +24579,15 @@
    "kana": "くまもとやつしろ",
    "prefecture": "熊本県",
    "region": "九州・沖縄",
+   "slug": "kumamoto",
+   "source_ids": [
+    "45053",
+    "45118"
+   ],
+   "live_ids": [
+    "45053",
+    "45118"
+   ],
    "team_names": [
     "八代高専",
     "熊本高専八代",
@@ -24604,6 +25060,22 @@
    "kana": "くまもと",
    "prefecture": "熊本県",
    "region": "九州・沖縄",
+   "slug": "kumamoto",
+   "source_ids": [
+    "45015",
+    "45091",
+    "45104",
+    "45106",
+    "45110",
+    "45113"
+   ],
+   "live_ids": [
+    "45015",
+    "45104",
+    "45106",
+    "45110",
+    "45113"
+   ],
    "team_names": [
     "熊本高専熊本",
     "熊本高専熊本・菊池農",
@@ -25210,6 +25682,13 @@
    "kana": "おおいた",
    "prefecture": "大分県",
    "region": "九州・沖縄",
+   "slug": "oita",
+   "source_ids": [
+    "46030"
+   ],
+   "live_ids": [
+    "46030"
+   ],
    "team_names": [
     "大分高専"
    ],
@@ -25706,6 +26185,16 @@
    "kana": "みやこのじょう",
    "prefecture": "宮崎県",
    "region": "九州・沖縄",
+   "slug": "miyazaki",
+   "source_ids": [
+    "47039",
+    "47068",
+    "47073",
+    "47081"
+   ],
+   "live_ids": [
+    "47039"
+   ],
    "team_names": [
     "宮崎海洋・都城高専",
     "都城高専",
@@ -26179,6 +26668,13 @@
    "kana": "かごしま",
    "prefecture": "鹿児島県",
    "region": "九州・沖縄",
+   "slug": "kagoshima",
+   "source_ids": [
+    "48049"
+   ],
+   "live_ids": [
+    "48049"
+   ],
    "team_names": [
     "鹿児島高専"
    ],
@@ -26662,6 +27158,16 @@
    "kana": "おきなわ",
    "prefecture": "沖縄県",
    "region": "九州・沖縄",
+   "slug": "okinawa",
+   "source_ids": [
+    "49068",
+    "49102",
+    "49105",
+    "49109"
+   ],
+   "live_ids": [
+    "49068"
+   ],
    "team_names": [
     "名護商工・本部・辺土名・北部農林・沖縄高専",
     "名護商工・沖縄高専",

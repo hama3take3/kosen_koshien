@@ -270,6 +270,7 @@ def main():
             "prefecture": e[3],
             "region": e[4],
             "source_ids": [],       # 元school_id群
+            "live_ids": set(),      # 直近稼働中の school_id（ライブ更新対象）
             "team_names": set(),    # 出場したチーム名（連合名含む）
             "games": [],
         }
@@ -297,6 +298,11 @@ def main():
         A["source_ids"].append(sid)
         A["team_names"].add(s["school_name"])
         seen_game.setdefault(cid, set())
+        # 直近(2024年以降)に試合実績のある source_id のみ「稼働中チーム」として
+        # ライブ更新の対象にする（過去限りの連合チームIDへの無駄打ちを避ける）
+        recent_years = [int(x.get("year") or 0) for x in r.get("info1", []) if str(x.get("year", "")).isdigit()]
+        if recent_years and max(recent_years) >= 2024:
+            A.setdefault("live_ids", set()).add(sid)
         for g in r.get("info1", []):
             gid = g.get("game_id", "")
             if gid and gid in seen_game[cid]:
@@ -410,6 +416,9 @@ def main():
             "kana": A["kana"],
             "prefecture": A["prefecture"],
             "region": A["region"],
+            "slug": CANON_SLUG.get(A["id"], ""),
+            "source_ids": sorted(set(A["source_ids"])),
+            "live_ids": sorted(A.get("live_ids") or set(A["source_ids"][:1])),
             "team_names": sorted(A["team_names"]),
             "total_games": len(games),
             "wins": wins,
